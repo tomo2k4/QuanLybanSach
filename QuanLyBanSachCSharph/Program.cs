@@ -1,3 +1,5 @@
+using QuanLyBanSachCSharph.Views;
+
 namespace QuanLyBanSachCSharph
 {
     internal static class Program
@@ -12,7 +14,9 @@ namespace QuanLyBanSachCSharph
             // see https://aka.ms/applicationconfiguration.
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.Run(new Form1());
+            Application.Run(new Login());
+
         }
     }
 }

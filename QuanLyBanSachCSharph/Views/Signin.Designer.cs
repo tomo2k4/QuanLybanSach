@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Signin));
             Button button1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Signin));
             pictureBox1 = new PictureBox();
             label3 = new Label();
             btnLogin = new Button();
@@ -59,6 +59,18 @@
             ((System.ComponentModel.ISupportInitialize)MinForm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CloseForm).BeginInit();
             SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.Cursor = Cursors.Hand;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(813, 629);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 33);
+            button1.TabIndex = 28;
+            button1.Text = "Login";
+            button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -241,18 +253,6 @@
             label7.TabIndex = 27;
             label7.Text = "Đã có tài khoản?";
             // 
-            // button1
-            // 
-            button1.Cursor = Cursors.Hand;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(813, 629);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 33);
-            button1.TabIndex = 28;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // MinForm
             // 
             MinForm.Image = (Image)resources.GetObject("MinForm.Image");
@@ -272,6 +272,7 @@
             CloseForm.SizeMode = PictureBoxSizeMode.CenterImage;
             CloseForm.TabIndex = 29;
             CloseForm.TabStop = false;
+            CloseForm.Click += CloseForm_Click;
             // 
             // Signin
             // 

@@ -31,5 +31,10 @@ namespace QuanLyBanSachCSharph.Views
         {
 
         }
+
+        private void CloseForm_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
