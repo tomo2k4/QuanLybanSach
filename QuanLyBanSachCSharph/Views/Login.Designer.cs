@@ -40,6 +40,8 @@
             lblopen = new PictureBox();
             btnLogin = new Button();
             label3 = new Label();
+            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            lblMessage = new Label();
             ((System.ComponentModel.ISupportInitialize)CloseForm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MinForm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -137,7 +139,7 @@
             lblopen.SizeMode = PictureBoxSizeMode.CenterImage;
             lblopen.TabIndex = 8;
             lblopen.TabStop = false;
-            lblopen.Click += pictureBox5_Click;
+            lblopen.Click += lblopen_Click;
             // 
             // btnLogin
             // 
@@ -145,22 +147,37 @@
             btnLogin.Cursor = Cursors.Hand;
             btnLogin.Font = new Font("Roboto", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = SystemColors.ButtonHighlight;
-            btnLogin.Location = new Point(478, 295);
+            btnLogin.Location = new Point(446, 304);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(215, 52);
             btnLogin.TabIndex = 9;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Roboto", 28.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label3.Location = new Point(436, 63);
+            label3.Location = new Point(411, 44);
             label3.Name = "label3";
             label3.Size = new Size(269, 57);
             label3.TabIndex = 10;
             label3.Text = "BOOKSHOP";
+            // 
+            // sqlCommand1
+            // 
+            sqlCommand1.CommandTimeout = 30;
+            sqlCommand1.EnableOptimizedParameterBinding = false;
+            // 
+            // lblMessage
+            // 
+            lblMessage.AutoSize = true;
+            lblMessage.Location = new Point(478, 272);
+            lblMessage.Name = "lblMessage";
+            lblMessage.Size = new Size(81, 20);
+            lblMessage.TabIndex = 11;
+            lblMessage.Text = "Thông báo";
             // 
             // Login
             // 
@@ -168,6 +185,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Moccasin;
             ClientSize = new Size(800, 415);
+            Controls.Add(lblMessage);
             Controls.Add(label3);
             Controls.Add(btnLogin);
             Controls.Add(lblopen);
@@ -206,5 +224,7 @@
         private PictureBox lblopen;
         private Button btnLogin;
         private Label label3;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
+        private Label lblMessage;
     }
 }
