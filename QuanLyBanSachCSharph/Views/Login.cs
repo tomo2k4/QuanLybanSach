@@ -21,7 +21,8 @@ namespace QuanLyBanSachCSharph.Views
         {
             InitializeComponent();
             NguoidungCon = new NguoidungController();
-
+            txtPassword.UseSystemPasswordChar = true; // Ẩn mật khẩu
+            lblclose.Visible = false; // Ẩn biểu tượng đóng
 
         }
 
@@ -32,7 +33,12 @@ namespace QuanLyBanSachCSharph.Views
 
         private void lblopen_Click(object sender, EventArgs e)
         {
+            // Đặt kiểu hiển thị của TextBox về bình thường để hiển thị mật khẩu
+            txtPassword.UseSystemPasswordChar = false;
 
+            // Ẩn lblopen và hiện lblclose
+            lblopen.Visible = false;
+            lblclose.Visible = true;
         }
 
         private void MinForm_Click(object sender, EventArgs e)
@@ -45,9 +51,14 @@ namespace QuanLyBanSachCSharph.Views
             Application.Exit();
         }
 
-        private void eyeclose_Click(object sender, EventArgs e)
+        private void lblclose_Click(object sender, EventArgs e)
         {
+            // Đặt kiểu hiển thị của TextBox về ký tự thay thế (*)
+            txtPassword.UseSystemPasswordChar = true;
 
+            // Ẩn lblclose và hiện lblopen
+            lblclose.Visible = false;
+            lblopen.Visible = true;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -58,6 +69,7 @@ namespace QuanLyBanSachCSharph.Views
             // Kiểm tra đầu vào
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
+                lblMessage.Visible = true;
                 lblMessage.Text = "Vui lòng nhập đầy đủ thông tin!";
                 lblMessage.ForeColor = System.Drawing.Color.Red;
                 return;
@@ -70,6 +82,7 @@ namespace QuanLyBanSachCSharph.Views
                 bool isAuthenticated = NguoidungCon.Authenticate(user);
                 if (isAuthenticated)
                 {
+                    lblMessage.Visible = true;
                     lblMessage.Text = "Đăng nhập thành công!";
                     lblMessage.ForeColor = System.Drawing.Color.Green;
 
@@ -80,6 +93,7 @@ namespace QuanLyBanSachCSharph.Views
                 }
                 else
                 {
+                    lblMessage.Visible = true;
                     lblMessage.Text = "Tên đăng nhập hoặc mật khẩu không đúng!";
                     lblMessage.ForeColor = System.Drawing.Color.Red;
                 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Button button1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Signin));
             pictureBox1 = new PictureBox();
             label3 = new Label();
@@ -50,7 +49,6 @@
             label7 = new Label();
             MinForm = new PictureBox();
             CloseForm = new PictureBox();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)eyeopen).BeginInit();
             ((System.ComponentModel.ISupportInitialize)eyeclose).BeginInit();
@@ -59,18 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)MinForm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CloseForm).BeginInit();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Cursor = Cursors.Hand;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(813, 629);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 33);
-            button1.TabIndex = 28;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -249,9 +235,10 @@
             label7.Font = new Font("Roboto", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label7.Location = new Point(690, 638);
             label7.Name = "label7";
-            label7.Size = new Size(117, 18);
+            label7.Size = new Size(191, 18);
             label7.TabIndex = 27;
-            label7.Text = "Đã có tài khoản?";
+            label7.Text = "Đã có tài khoản? Đăng nhập";
+            label7.Click += label7_Click;
             // 
             // MinForm
             // 
@@ -282,7 +269,6 @@
             ClientSize = new Size(1066, 694);
             Controls.Add(MinForm);
             Controls.Add(CloseForm);
-            Controls.Add(button1);
             Controls.Add(label7);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox3);

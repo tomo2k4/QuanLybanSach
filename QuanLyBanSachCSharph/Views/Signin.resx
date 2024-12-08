@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="button1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2847,7 +2844,7 @@
   <data name="eyeopen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJUSURBVFhH7ZZL
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJUSURBVFhH7ZZL
         b41BHIePxGUhSCRF2bp8A9T1MzRqh6QuG5euKkosfIGmsUM32kho3BYuO6mVS2ixE0uWlUaUaBE8z8mZ
         5jVmzul7Yvn+kifnfWf+M/PO/C9zapUqVSqh9XAERuElfIS5Bj7bNgKHQdv/ph3wEH7C7wWi7QPogra1
         Be5AmNSdPoJ+2AUbYXmDTbAbTsM4fAfH/ILbsBlK6SB8BSeZgYtQ5ljXwAX4BM7xDY5BSy2GYQi7vgkd
@@ -2864,7 +2861,7 @@
   <data name="eyeclose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKPSURBVFhH7ZbN
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKPSURBVFhH7ZbN
         i05RHMcf70o2yvtuEgs7CjFhaymm2U2kLCQrYuEPoIgdJZlsKCWlLJQSpfEy5S1/gGJD0gzyzucz7k93
         TufcmXkWj4XnW5/uc849937P+Z3f+d2n1VVXHdIieAR3x1odlubP4Bc8tKNdLYM9cBFczVv4Ap+r3/Zd
         gF2wGFTd3KvtKWsj3IDv4Ismwze4Bs+rdlvmq+AqxEtd7S04CL2wAubBLPDlG+AQ3IH6ZNsy3w2fwBeM
@@ -2882,7 +2879,7 @@
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJUSURBVFhH7ZZL
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJUSURBVFhH7ZZL
         b41BHIePxGUhSCRF2bp8A9T1MzRqh6QuG5euKkosfIGmsUM32kho3BYuO6mVS2ixE0uWlUaUaBE8z8mZ
         5jVmzul7Yvn+kifnfWf+M/PO/C9zapUqVSqh9XAERuElfIS5Bj7bNgKHQdv/ph3wEH7C7wWi7QPogra1
         Be5AmNSdPoJ+2AUbYXmDTbAbTsM4fAfH/ILbsBlK6SB8BSeZgYtQ5ljXwAX4BM7xDY5BSy2GYQi7vgkd
@@ -2899,7 +2896,7 @@
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKPSURBVFhH7ZbN
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKPSURBVFhH7ZbN
         i05RHMcf70o2yvtuEgs7CjFhaymm2U2kLCQrYuEPoIgdJZlsKCWlLJQSpfEy5S1/gGJD0gzyzucz7k93
         TufcmXkWj4XnW5/uc849937P+Z3f+d2n1VVXHdIieAR3x1odlubP4Bc8tKNdLYM9cBFczVv4Ap+r3/Zd
         gF2wGFTd3KvtKWsj3IDv4Ismwze4Bs+rdlvmq+AqxEtd7S04CL2wAubBLPDlG+AQ3IH6ZNsy3w2fwBeM
@@ -2917,7 +2914,7 @@
   <data name="MinForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAA7SURBVEhLYxgF
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAA7SURBVEhLYxgF
         o2AUDEOgB8QrgHg3mRikVxeIcYKLQPyfQnwBiHECmlsA8h6lQaQDxKNgFIyCYQQYGACiATrrnGtDFAAA
         AABJRU5ErkJggg==
 </value>
@@ -2925,7 +2922,7 @@
   <data name="CloseForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACfSURBVEhL7ZRJ
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACfSURBVEhL7ZRJ
         DoAgDEU5ucNCNw73dLiD/m8kIU0VHJq48CVvAba0oOJ+PkkBJ1huozQYy5x8G0WY4bLbcCICY3w8i0Rh
         Nz6BtvAIPgtjk3ddwTCxh5IahjEdvMRZkceLe+QRcKzNPUJ2G6od3S20Iq8tTkwLmB6R6UuWnZ99ppd3
         IhfQvvOUn1HF/Kowv+wyOEJe26mw8wEy9+dTOLcC5HVutFiTDKMAAAAASUVORK5CYII=
