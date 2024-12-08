@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System.Data;
+using QuanLyBanSachCSharph.Controllers;
 
 namespace BookShop
 {
@@ -11,7 +12,7 @@ namespace BookShop
             ShowData();
         }
 
-        Connect connect = new Connect();
+        DBConnect DBConnect = new DBConnect();
         float gridTotal = 0;
         int stock = 0;
         int key = 0;
@@ -21,7 +22,7 @@ namespace BookShop
         {
             String query = "SELECT * FROM Books";
 
-            using (SqlConnection conn = connect.GetConnection())
+            using (SqlConnection conn = DBConnect.GetConnection())
             {
                 conn.Open();
 
@@ -43,7 +44,7 @@ namespace BookShop
             string query = "UPDATE Books SET BQty = " + newQty + " WHERE BId = " + key + ";";
             try
             {
-                using (SqlConnection conn = connect.GetConnection())
+                using (SqlConnection conn = DBConnect.GetConnection())
                 {
                     conn.Open();
 
