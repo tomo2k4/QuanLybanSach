@@ -36,15 +36,15 @@
             label2 = new Label();
             txtUsername = new TextBox();
             txtPassword = new TextBox();
-            eyeclose = new PictureBox();
-            eyeopen = new PictureBox();
+            lblclose = new PictureBox();
+            lblopen = new PictureBox();
             btnLogin = new Button();
             label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)CloseForm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MinForm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)eyeclose).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)eyeopen).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lblclose).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lblopen).BeginInit();
             SuspendLayout();
             // 
             // CloseForm
@@ -117,27 +117,27 @@
             txtPassword.Size = new Size(254, 40);
             txtPassword.TabIndex = 6;
             // 
-            // eyeclose
+            // lblclose
             // 
-            eyeclose.Image = (Image)resources.GetObject("eyeclose.Image");
-            eyeclose.Location = new Point(729, 266);
-            eyeclose.Name = "eyeclose";
-            eyeclose.Size = new Size(48, 40);
-            eyeclose.SizeMode = PictureBoxSizeMode.CenterImage;
-            eyeclose.TabIndex = 7;
-            eyeclose.TabStop = false;
-            eyeclose.Click += eyeclose_Click;
+            lblclose.Image = (Image)resources.GetObject("lblclose.Image");
+            lblclose.Location = new Point(729, 266);
+            lblclose.Name = "lblclose";
+            lblclose.Size = new Size(48, 40);
+            lblclose.SizeMode = PictureBoxSizeMode.CenterImage;
+            lblclose.TabIndex = 7;
+            lblclose.TabStop = false;
+            lblclose.Click += eyeclose_Click;
             // 
-            // eyeopen
+            // lblopen
             // 
-            eyeopen.Image = (Image)resources.GetObject("eyeopen.Image");
-            eyeopen.Location = new Point(729, 220);
-            eyeopen.Name = "eyeopen";
-            eyeopen.Size = new Size(48, 40);
-            eyeopen.SizeMode = PictureBoxSizeMode.CenterImage;
-            eyeopen.TabIndex = 8;
-            eyeopen.TabStop = false;
-            eyeopen.Click += pictureBox5_Click;
+            lblopen.Image = (Image)resources.GetObject("lblopen.Image");
+            lblopen.Location = new Point(729, 220);
+            lblopen.Name = "lblopen";
+            lblopen.Size = new Size(48, 40);
+            lblopen.SizeMode = PictureBoxSizeMode.CenterImage;
+            lblopen.TabIndex = 8;
+            lblopen.TabStop = false;
+            lblopen.Click += pictureBox5_Click;
             // 
             // btnLogin
             // 
@@ -170,8 +170,8 @@
             ClientSize = new Size(800, 415);
             Controls.Add(label3);
             Controls.Add(btnLogin);
-            Controls.Add(eyeopen);
-            Controls.Add(eyeclose);
+            Controls.Add(lblopen);
+            Controls.Add(lblclose);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
             Controls.Add(label2);
@@ -187,8 +187,8 @@
             ((System.ComponentModel.ISupportInitialize)CloseForm).EndInit();
             ((System.ComponentModel.ISupportInitialize)MinForm).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)eyeclose).EndInit();
-            ((System.ComponentModel.ISupportInitialize)eyeopen).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lblclose).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lblopen).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -202,8 +202,8 @@
         private Label label2;
         private TextBox txtUsername;
         private TextBox txtPassword;
-        private PictureBox eyeclose;
-        private PictureBox eyeopen;
+        private PictureBox lblclose;
+        private PictureBox lblopen;
         private Button btnLogin;
         private Label label3;
     }
