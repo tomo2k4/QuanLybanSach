@@ -2,6 +2,7 @@
 using QuanLyBanSachCSharph.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -84,6 +85,48 @@ namespace QuanLyBanSachCSharph.Controllers
                 }
             }
         }
+
+        public DataTable GetAllBooks()
+        {
+            DataTable booksTable = new DataTable();
+
+            try
+            {
+                using (SqlConnection conn = dbConnect.GetConnection())
+                {
+                    conn.Open();
+
+                    string query = @"
+                SELECT 
+                    id_sach, 
+                    tensach, 
+                    id_tacgia, 
+                    id_theloai, 
+                    nhaxuatban, 
+                    giasach, 
+                    soluong, 
+                    ngaynhan, 
+                    trangthai, 
+                    anhsach 
+                FROM tbl_sach";
+
+                    using (SqlCommand command = new SqlCommand(query, conn))
+                    {
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(booksTable);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Đã xảy ra lỗi khi lấy dữ liệu sách: " + ex.Message);
+            }
+
+            return booksTable;
+        }
+
 
 
 
