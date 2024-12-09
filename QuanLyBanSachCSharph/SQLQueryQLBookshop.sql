@@ -59,3 +59,28 @@ CREATE TABLE tbl_Hoadon(
 	hoten NVARCHAR(200) NOT NULL,
 	ngaymua DATETIME
 );
+
+-- 2. Bảng Thể Loại Sách
+INSERT INTO tbl_theloai (tentheloai) 
+VALUES (N'Văn học'),
+	   (N'Thơ'),
+	   (N'Truyện Tranh'), 
+       (N'Ẩm thực'), 
+	   (N'Cổ tích'), 
+	   (N'Công nghệ thông tin'), 
+	   (N'Kỹ năng sống'), 
+	   (N'Kinh Tế'), 
+	   (N'Trẻ Em'), 
+	   (N'Trinh Thám'), 
+	   (N'Kinh dị'), 
+	   (N'Khám Phá Thế Giới');
+
+
+--3. Bảng Tác giả
+INSERT INTO tbl_tacgia (tentacgia, linhvuc, gioithieu) 
+VALUES (N'Nam Cao', N'Văn học', N'Tác giả nổi tiếng với các tác phẩm phản ánh xã hội Việt Nam trước cách mạng'),
+	   (N'Tố Hữu', N'Thơ ca', N'Nhà thơ nổi tiếng với các bài thơ cách mạng và kháng chiến'), 
+	   (N' Louie Stowell', N'Hài hước', N'Nổi tiếng với các cuốn sách hài hước dành cho trẻ em, đặc biệt là về vị thần Bắc Âu, Loki'),
+	   (N'Rosie Nguyễn (Nguyễn Hoàng Nguyên)', N'Hài kịch', N'Nhà văn, một travel blogger và làm giảng viên của một lớp học kĩ năng và yoga'),
+	   (N'Dale Carnegie',N'Nhà văn và giảng viên', N' nhà văn và giảng viên người Mỹ nổi tiếng với các cuốn sách về cải thiện bản thân, giao tiếp công cộng và kỹ năng xã hội'),
+	   (N'Nguyễn Nhật Ánh', N'Nhà văn',N'nhà văn nổi tiếng của Việt Nam, chuyên viết các tác phẩm văn học thiếu nhi và thanh thiếu niên' );
