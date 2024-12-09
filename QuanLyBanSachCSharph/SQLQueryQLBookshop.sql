@@ -43,9 +43,8 @@ CREATE TABLE tbl_thanhvien (
     email VARCHAR(100), -- Email không bắt buộc
     sodt VARCHAR(20) NOT NULL UNIQUE, -- Số điện thoại phải duy nhất và không được để trống
     gioitinh NVARCHAR(20), -- Giới tính
-	anhhoso IMAGE,
-    id_user INT, -- Khóa ngoại liên kết với bảng tbl_NguoiDung
-    CONSTRAINT fk_nguoidung FOREIGN KEY (id_user) REFERENCES tbl_NguoiDung(id_user) ON DELETE CASCADE
+    id_user INT, -- Khóa ngoại liên kết với bảng tbl_user
+    CONSTRAINT fk_nguoidung FOREIGN KEY (id_user) REFERENCES tbl_user(id_user) ON DELETE CASCADE
 );
 
 --6. Bảng Hoa Don Mua
@@ -59,6 +58,17 @@ CREATE TABLE tbl_Hoadon(
 	hoten NVARCHAR(200) NOT NULL,
 	ngaymua DATETIME
 );
+
+--7. Bảng Độc Giả
+CREATE TABLE tbl_docgia (
+    id_docgia INT PRIMARY KEY NOT NULL IDENTITY(1,1), -- Khóa chính tự tăng
+    tendocgia NVARCHAR(200) NOT NULL, -- Tên độc giả, bắt buộc
+	sodt VARCHAR(20) NOT NULL UNIQUE,
+    email VARCHAR(100), -- Email, không bắt buộc
+    gioitinh NVARCHAR(20), -- Giới tính
+    tongtienthanhtoan MONEY DEFAULT 0 -- Tổng tiền thanh toán, mặc định là 0
+);
+
 
 -- 2. Bảng Thể Loại Sách
 INSERT INTO tbl_theloai (tentheloai) 

@@ -1,4 +1,5 @@
 using QuanLyBanSachCSharph.Views;
+using BookShop; // Namespace Billing
 
 namespace QuanLyBanSachCSharph
 {
@@ -17,11 +18,12 @@ namespace QuanLyBanSachCSharph
             //Application.Run(new Form1());
             //Application.Run(new Login());
             //Application.Run(new Signin());
-            Application.Run(new HomePage());
+            //Application.Run(new HomePage());
             //Application.Run(new MgBook());
             //Application.Run(new Theloai());
 
             Application.Run(new Billing());
+
         }
     }
 }
