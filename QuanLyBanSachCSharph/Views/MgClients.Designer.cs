@@ -1,6 +1,6 @@
 ﻿namespace QuanLyBanSachCSharph.Views
 {
-    partial class Clients
+    partial class MgClients
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clients));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MgClients));
             label4 = new Label();
             picLoad = new PictureBox();
             txtSearch = new TextBox();
@@ -40,7 +40,6 @@
             panel1 = new Panel();
             btnSearch = new Button();
             tblClient = new DataGridView();
-            dtimerNhap = new DateTimePicker();
             picClient = new TextBox();
             btnClear = new Button();
             btnDelete = new Button();
@@ -50,9 +49,13 @@
             txtClientName = new TextBox();
             lblCientName = new Label();
             txtPhoneNumber = new TextBox();
-            label7 = new Label();
+            lblEmail = new Label();
             picDate = new TextBox();
             panel2 = new Panel();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            lblSex = new Label();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)picLoad).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CloseForm).BeginInit();
             panel1.SuspendLayout();
@@ -95,7 +98,7 @@
             // picPhoneNumber
             // 
             picPhoneNumber.Font = new Font("Microsoft Sans Serif", 12F);
-            picPhoneNumber.Location = new Point(249, 706);
+            picPhoneNumber.Location = new Point(237, 706);
             picPhoneNumber.Margin = new Padding(4);
             picPhoneNumber.Name = "picPhoneNumber";
             picPhoneNumber.ReadOnly = true;
@@ -165,19 +168,10 @@
             tblClient.Size = new Size(1100, 440);
             tblClient.TabIndex = 53;
             // 
-            // dtimerNhap
-            // 
-            dtimerNhap.Font = new Font("Microsoft Sans Serif", 12F);
-            dtimerNhap.Location = new Point(620, 706);
-            dtimerNhap.Margin = new Padding(4);
-            dtimerNhap.Name = "dtimerNhap";
-            dtimerNhap.Size = new Size(300, 26);
-            dtimerNhap.TabIndex = 51;
-            // 
             // picClient
             // 
             picClient.Font = new Font("Microsoft Sans Serif", 12F);
-            picClient.Location = new Point(249, 609);
+            picClient.Location = new Point(237, 609);
             picClient.Margin = new Padding(4);
             picClient.Name = "picClient";
             picClient.ReadOnly = true;
@@ -240,7 +234,7 @@
             // 
             lblPhoneNumber.AutoSize = true;
             lblPhoneNumber.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPhoneNumber.Location = new Point(307, 674);
+            lblPhoneNumber.Location = new Point(295, 674);
             lblPhoneNumber.Margin = new Padding(5, 0, 5, 0);
             lblPhoneNumber.Name = "lblPhoneNumber";
             lblPhoneNumber.Size = new Size(140, 24);
@@ -250,17 +244,17 @@
             // txtClientName
             // 
             txtClientName.Font = new Font("Microsoft Sans Serif", 12F);
-            txtClientName.Location = new Point(295, 609);
+            txtClientName.Location = new Point(283, 609);
             txtClientName.Margin = new Padding(4);
             txtClientName.Name = "txtClientName";
-            txtClientName.Size = new Size(300, 26);
+            txtClientName.Size = new Size(260, 26);
             txtClientName.TabIndex = 37;
             // 
             // lblCientName
             // 
             lblCientName.AutoSize = true;
             lblCientName.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCientName.Location = new Point(307, 578);
+            lblCientName.Location = new Point(295, 578);
             lblCientName.Margin = new Padding(5, 0, 5, 0);
             lblCientName.Name = "lblCientName";
             lblCientName.Size = new Size(113, 24);
@@ -270,27 +264,27 @@
             // txtPhoneNumber
             // 
             txtPhoneNumber.Font = new Font("Microsoft Sans Serif", 12F);
-            txtPhoneNumber.Location = new Point(296, 706);
+            txtPhoneNumber.Location = new Point(284, 706);
             txtPhoneNumber.Margin = new Padding(4);
             txtPhoneNumber.Name = "txtPhoneNumber";
-            txtPhoneNumber.Size = new Size(239, 26);
+            txtPhoneNumber.Size = new Size(260, 26);
             txtPhoneNumber.TabIndex = 65;
             // 
-            // label7
+            // lblEmail
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(631, 674);
-            label7.Margin = new Padding(5, 0, 5, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(149, 24);
-            label7.TabIndex = 52;
-            label7.Text = "Date Of Joinning";
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblEmail.Location = new Point(660, 674);
+            lblEmail.Margin = new Padding(5, 0, 5, 0);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(57, 24);
+            lblEmail.TabIndex = 52;
+            lblEmail.Text = "Email";
             // 
             // picDate
             // 
             picDate.Font = new Font("Microsoft Sans Serif", 12F);
-            picDate.Location = new Point(573, 706);
+            picDate.Location = new Point(602, 706);
             picDate.Margin = new Padding(4);
             picDate.Name = "picDate";
             picDate.ReadOnly = true;
@@ -307,12 +301,56 @@
             panel2.Size = new Size(1140, 60);
             panel2.TabIndex = 67;
             // 
-            // Clients
+            // textBox1
+            // 
+            textBox1.Font = new Font("Microsoft Sans Serif", 12F);
+            textBox1.Location = new Point(649, 706);
+            textBox1.Margin = new Padding(4);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(260, 26);
+            textBox1.TabIndex = 68;
+            // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Microsoft Sans Serif", 12F);
+            textBox2.Location = new Point(603, 609);
+            textBox2.Margin = new Padding(4);
+            textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
+            textBox2.Size = new Size(39, 26);
+            textBox2.TabIndex = 70;
+            // 
+            // lblSex
+            // 
+            lblSex.AutoSize = true;
+            lblSex.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSex.Location = new Point(661, 578);
+            lblSex.Margin = new Padding(5, 0, 5, 0);
+            lblSex.Name = "lblSex";
+            lblSex.Size = new Size(43, 24);
+            lblSex.TabIndex = 69;
+            lblSex.Text = "Sex";
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Microsoft Sans Serif", 12F);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Male", "Female" });
+            comboBox1.Location = new Point(649, 605);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(160, 28);
+            comboBox1.TabIndex = 71;
+            // 
+            // MgClients
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1140, 900);
+            Controls.Add(comboBox1);
+            Controls.Add(textBox2);
+            Controls.Add(lblSex);
+            Controls.Add(textBox1);
             Controls.Add(panel2);
             Controls.Add(picDate);
             Controls.Add(txtPhoneNumber);
@@ -323,8 +361,7 @@
             Controls.Add(panel1);
             Controls.Add(btnSearch);
             Controls.Add(tblClient);
-            Controls.Add(label7);
-            Controls.Add(dtimerNhap);
+            Controls.Add(lblEmail);
             Controls.Add(picClient);
             Controls.Add(btnClear);
             Controls.Add(btnDelete);
@@ -335,7 +372,7 @@
             Controls.Add(lblCientName);
             Cursor = Cursors.SizeAll;
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Clients";
+            Name = "MgClients";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)picLoad).EndInit();
@@ -380,8 +417,12 @@
         private TextBox txtClientName;
         private Label lblCientName;
         private TextBox txtPhoneNumber;
-        private Label label7;
+        private Label lblEmail;
         private TextBox picDate;
         private Panel panel2;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private Label lblSex;
+        private ComboBox comboBox1;
     }
 }

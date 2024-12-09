@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyBanSachCSharph.Views
 {
-    public partial class Clients : Form
+    public partial class MgClients : Form
     {
-        public Clients()
+        public MgClients()
         {
             InitializeComponent();
         }
