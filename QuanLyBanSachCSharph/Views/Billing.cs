@@ -7,7 +7,7 @@ namespace BookShop
     public partial class Billing : Form
     {
         private BillController billController = new BillController();
-        private DBConnect DBConnect = new DBConnect();
+        private readonly DBConnect dbConnect = new DBConnect();
         private float gridTotal = 0;
         private int stock = 0;
         private int key = 0;
@@ -19,17 +19,11 @@ namespace BookShop
             ShowData();
         }
 
-        DBConnect DBConnect = new DBConnect();
-        float gridTotal = 0;
-        int stock = 0;
-        int key = 0;
-        int n = 0;
-
         private void ShowData()
         {
             String query = "SELECT * FROM Books";
 
-            using (SqlConnection conn = DBConnect.GetConnection())
+            using (SqlConnection conn = dbConnect.GetConnection())
             {
                 conn.Open();
 
@@ -51,7 +45,7 @@ namespace BookShop
             string query = "UPDATE Books SET BQty = " + newQty + " WHERE BId = " + key + ";";
             try
             {
-                using (SqlConnection conn = DBConnect.GetConnection())
+                using (SqlConnection conn = dbConnect.GetConnection())
                 {
                     conn.Open();
 
@@ -81,7 +75,7 @@ namespace BookShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (tbQuantity.Text == "" || Convert.ToInt32(tbQuantity.Text) > stock || Convert.ToInt32(tbQuantity.Text) == 0)
+            if (string.IsNullOrWhiteSpace(tbQuantity.Text) || !int.TryParse(tbQuantity.Text, out int quantity) || quantity > stock || quantity <= 0)
             {
                 MessageBox.Show("No Enough Stock!");
             }
@@ -91,7 +85,7 @@ namespace BookShop
             }
             else
             {
-                int quantity = Convert.ToInt32(tbQuantity.Text);
+                //int quantity = Convert.ToInt32(tbQuantity.Text);
                 float price;
                 bool isValidPrice = float.TryParse(tbPrice.Text, out price);
 
