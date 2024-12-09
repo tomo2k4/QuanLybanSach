@@ -86,7 +86,7 @@ namespace QuanLyBanSachCSharph.Views
             HideMenu();
 
         }
-             
+
         private void CloseForm_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -95,6 +95,11 @@ namespace QuanLyBanSachCSharph.Views
         private void MinForm_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMgClient_Click(object sender, EventArgs e)
+        {
+            HideMenu();
         }
     }
 }

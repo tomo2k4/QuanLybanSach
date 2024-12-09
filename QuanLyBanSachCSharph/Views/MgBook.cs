@@ -34,6 +34,15 @@ namespace QuanLyBanSachCSharph.Views
         private void btnThem_Click(object sender, EventArgs e)
         {
             string tensach = txtTensach.Text;
+            string tacgia = txtTacgia.Text;
+            int matg;
+            string matacgia = txtMatg.Text;
+            matg = int.Parse(matacgia);
+            int matl;
+            string matheloai = txtMatl.Text;
+            matl = int.Parse(matheloai);
+
+
 
 
         }
@@ -66,7 +75,7 @@ namespace QuanLyBanSachCSharph.Views
         private void btnTaianh_Click(object sender, EventArgs e)
         {
             OpenFileDialog opt = new OpenFileDialog();
-            opt.Filter = "Select Photo(*.jpg; *.png *.gif)| *.jpg; *.phy; *.gif";
+            opt.Filter = "Select Photo(*.jpg; *.png *.gif)| *.jpg; *.png; *.gif";
             if (opt.ShowDialog() == DialogResult.OK)
             {
                 picboxAnh.Image = Image.FromFile(opt.FileName);
@@ -108,6 +117,11 @@ namespace QuanLyBanSachCSharph.Views
         }
 
         private void txtMatl_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tblSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
