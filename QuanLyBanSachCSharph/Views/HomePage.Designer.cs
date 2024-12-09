@@ -32,6 +32,7 @@
             pnlSlide = new Panel();
             btnLogout = new Button();
             pnlUser = new Panel();
+            btnMgClient = new Button();
             btnMgUser = new Button();
             btnUser = new Button();
             pnlbooks = new Panel();
@@ -106,7 +107,7 @@
             btnLogout.FlatAppearance.BorderSize = 0;
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Roboto Medium", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogout.Location = new Point(0, 562);
+            btnLogout.Location = new Point(0, 620);
             btnLogout.Name = "btnLogout";
             btnLogout.Padding = new Padding(15, 0, 0, 0);
             btnLogout.Size = new Size(259, 67);
@@ -117,12 +118,28 @@
             // 
             // pnlUser
             // 
+            pnlUser.Controls.Add(btnMgClient);
             pnlUser.Controls.Add(btnMgUser);
             pnlUser.Dock = DockStyle.Top;
             pnlUser.Location = new Point(0, 506);
             pnlUser.Name = "pnlUser";
-            pnlUser.Size = new Size(259, 56);
+            pnlUser.Size = new Size(259, 114);
             pnlUser.TabIndex = 6;
+            // 
+            // btnMgClient
+            // 
+            btnMgClient.Dock = DockStyle.Top;
+            btnMgClient.FlatAppearance.BorderSize = 0;
+            btnMgClient.FlatStyle = FlatStyle.Flat;
+            btnMgClient.Location = new Point(0, 56);
+            btnMgClient.Name = "btnMgClient";
+            btnMgClient.Padding = new Padding(40, 0, 0, 0);
+            btnMgClient.Size = new Size(259, 56);
+            btnMgClient.TabIndex = 1;
+            btnMgClient.Text = "Manage Client";
+            btnMgClient.TextAlign = ContentAlignment.MiddleLeft;
+            btnMgClient.UseVisualStyleBackColor = true;
+            btnMgClient.Click += btnMgClient_Click;
             // 
             // btnMgUser
             // 
@@ -570,5 +587,6 @@
         private PictureBox pictureBox2;
         private PictureBox CloseForm;
         private PictureBox MinForm;
+        private Button btnMgClient;
     }
 }
