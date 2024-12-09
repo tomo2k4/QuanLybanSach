@@ -7,7 +7,7 @@ namespace BookShop
     public partial class Billing : Form
     {
         private BillController billController = new BillController();
-        private DBConnect DBConnect = new DBConnect();
+        private DBConnect dbConnect = new DBConnect();
         private float gridTotal = 0;
         private int stock = 0;
         private int key = 0;
@@ -30,6 +30,7 @@ namespace BookShop
             try
             {
                 billController.UpdateBookStock(key, newQty);
+
                 MessageBox.Show("Book Updated Successfully!");
                 ShowData();
             }
@@ -51,7 +52,7 @@ namespace BookShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (tbQuantity.Text == "" || Convert.ToInt32(tbQuantity.Text) > stock || Convert.ToInt32(tbQuantity.Text) == 0)
+            if (string.IsNullOrWhiteSpace(tbQuantity.Text) || !int.TryParse(tbQuantity.Text, out int quantity) || quantity > stock || quantity <= 0)
             {
                 MessageBox.Show("No Enough Stock!");
                 return;
@@ -63,7 +64,7 @@ namespace BookShop
             }
             else
             {
-                int quantity = Convert.ToInt32(tbQuantity.Text);
+                //int quantity = Convert.ToInt32(tbQuantity.Text);
                 float price;
                 bool isValidPrice = float.TryParse(tbPrice.Text, out price);
 
