@@ -17,7 +17,8 @@ namespace QuanLyBanSachCSharph
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
             //Application.Run(new Login());
-            Application.Run(new Billing());
+
+            Application.Run(new HomePage());
 
         }
     }

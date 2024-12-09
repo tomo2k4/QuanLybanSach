@@ -43,6 +43,7 @@ CREATE TABLE tbl_thanhvien (
     email VARCHAR(100), -- Email không bắt buộc
     sodt VARCHAR(20) NOT NULL UNIQUE, -- Số điện thoại phải duy nhất và không được để trống
     gioitinh NVARCHAR(20), -- Giới tính
+	anhhoso IMAGE,
     id_user INT, -- Khóa ngoại liên kết với bảng tbl_NguoiDung
     CONSTRAINT fk_nguoidung FOREIGN KEY (id_user) REFERENCES tbl_NguoiDung(id_user) ON DELETE CASCADE
 );
