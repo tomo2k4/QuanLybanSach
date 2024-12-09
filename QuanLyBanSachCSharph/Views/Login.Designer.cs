@@ -231,7 +231,6 @@
             lblDangki.Size = new Size(76, 24);
             lblDangki.TabIndex = 15;
             lblDangki.Text = "Đăng kí";
-            lblDangki.Click += lblDangki_Click;
             // 
             // label8
             // 

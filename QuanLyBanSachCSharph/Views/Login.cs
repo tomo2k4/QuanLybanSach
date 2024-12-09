@@ -88,8 +88,7 @@ namespace QuanLyBanSachCSharph.Views
 
                     // Chuyển sang form chính (Main Form)
                     this.Hide();
-                    //Dashboard mainForm = new Dashboard();
-                    HomePage mainForm = new HomePage();
+                    SignUp mainForm = new SignUp();
                     mainForm.Show();
                 }
                 else
@@ -103,13 +102,6 @@ namespace QuanLyBanSachCSharph.Views
             {
                 MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-                
-        private void lblDangki_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Signin signForm = new Signin();
-            signForm.Show();
         }
     }
 }

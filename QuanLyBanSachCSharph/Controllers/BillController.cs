@@ -29,9 +29,9 @@ namespace QuanLyBanSachCSharph.Controllers
             }
         }
 
-        public void UpdateBook(int newQty, int key)
+        public void UpdateBookStock(int newQty, int key)
         {
-            string query = "UPDATE Books SET BQty = {newQty} WHERE BId = {key};";
+            string query = $"UPDATE Books SET BQty = {newQty} WHERE BId = {key};";
             try
             {
                 using (SqlConnection conn = DBConnect.GetConnection())
@@ -39,6 +39,7 @@ namespace QuanLyBanSachCSharph.Controllers
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
+                    MessageBox.Show("Book Updated Successfully!");
                     conn.Close();
                 }
             }
@@ -46,11 +47,6 @@ namespace QuanLyBanSachCSharph.Controllers
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        public bool ValidateStock(int stock, int requestedQuantity)
-        {
-            return requestedQuantity > 0 && requestedQuantity < stock;
         }
 
         public float CalculateTotal(int quantity, float price)
