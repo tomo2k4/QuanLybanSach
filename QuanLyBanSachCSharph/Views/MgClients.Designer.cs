@@ -1,4 +1,5 @@
-﻿namespace QuanLyBanSachCSharph.Views
+﻿
+namespace QuanLyBanSachCSharph.Views
 {
     partial class MgClients
     {
@@ -30,17 +31,15 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MgClients));
-            label4 = new Label();
+            lblTitle = new Label();
             picLoad = new PictureBox();
             txtSearch = new TextBox();
-            picPhoneNumber = new TextBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
             CloseForm = new PictureBox();
             lbClientList = new Label();
-            panel1 = new Panel();
+            pnTitle = new Panel();
             btnSearch = new Button();
             tblClient = new DataGridView();
-            picClient = new TextBox();
             btnClear = new Button();
             btnDelete = new Button();
             btnUpdate = new Button();
@@ -50,29 +49,35 @@
             lblCientName = new Label();
             txtPhoneNumber = new TextBox();
             lblEmail = new Label();
-            picDate = new TextBox();
-            panel2 = new Panel();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            pnFiller = new Panel();
+            txtEmail = new TextBox();
             lblSex = new Label();
-            comboBox1 = new ComboBox();
+            cbSex = new ComboBox();
+            picClientName = new PictureBox();
+            picSex = new PictureBox();
+            picPhoneNum = new PictureBox();
+            picEmail = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)picLoad).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CloseForm).BeginInit();
-            panel1.SuspendLayout();
+            pnTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tblClient).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picClientName).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picSex).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picPhoneNum).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picEmail).BeginInit();
             SuspendLayout();
             // 
-            // label4
+            // lblTitle
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Brown;
-            label4.Location = new Point(461, 7);
-            label4.Margin = new Padding(5, 0, 5, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(190, 36);
-            label4.TabIndex = 0;
-            label4.Text = "BOOKSHOP";
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.Brown;
+            lblTitle.Location = new Point(461, 7);
+            lblTitle.Margin = new Padding(5, 0, 5, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(190, 36);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "BOOKSHOP";
             // 
             // picLoad
             // 
@@ -84,6 +89,7 @@
             picLoad.SizeMode = PictureBoxSizeMode.CenterImage;
             picLoad.TabIndex = 54;
             picLoad.TabStop = false;
+            picLoad.Click += picLoad_Click;
             // 
             // txtSearch
             // 
@@ -94,16 +100,6 @@
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(260, 26);
             txtSearch.TabIndex = 63;
-            // 
-            // picPhoneNumber
-            // 
-            picPhoneNumber.Font = new Font("Microsoft Sans Serif", 12F);
-            picPhoneNumber.Location = new Point(237, 706);
-            picPhoneNumber.Margin = new Padding(4);
-            picPhoneNumber.Name = "picPhoneNumber";
-            picPhoneNumber.ReadOnly = true;
-            picPhoneNumber.Size = new Size(39, 26);
-            picPhoneNumber.TabIndex = 62;
             // 
             // contextMenuStrip1
             // 
@@ -121,6 +117,7 @@
             CloseForm.SizeMode = PictureBoxSizeMode.CenterImage;
             CloseForm.TabIndex = 22;
             CloseForm.TabStop = false;
+            CloseForm.Click += CloseForm_Click;
             // 
             // lbClientList
             // 
@@ -134,16 +131,16 @@
             lbClientList.TabIndex = 60;
             lbClientList.Text = "Client List ";
             // 
-            // panel1
+            // pnTitle
             // 
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(CloseForm);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1140, 58);
-            panel1.TabIndex = 57;
+            pnTitle.Controls.Add(lblTitle);
+            pnTitle.Controls.Add(CloseForm);
+            pnTitle.Dock = DockStyle.Top;
+            pnTitle.Location = new Point(0, 0);
+            pnTitle.Margin = new Padding(4);
+            pnTitle.Name = "pnTitle";
+            pnTitle.Size = new Size(1140, 58);
+            pnTitle.TabIndex = 57;
             // 
             // btnSearch
             // 
@@ -157,26 +154,20 @@
             btnSearch.TabIndex = 55;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // tblClient
             // 
             tblClient.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tblClient.Location = new Point(20, 113);
             tblClient.Margin = new Padding(4);
+            tblClient.MultiSelect = false;
             tblClient.Name = "tblClient";
             tblClient.RowHeadersWidth = 51;
+            tblClient.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             tblClient.Size = new Size(1100, 440);
             tblClient.TabIndex = 53;
-            // 
-            // picClient
-            // 
-            picClient.Font = new Font("Microsoft Sans Serif", 12F);
-            picClient.Location = new Point(237, 609);
-            picClient.Margin = new Padding(4);
-            picClient.Name = "picClient";
-            picClient.ReadOnly = true;
-            picClient.Size = new Size(39, 26);
-            picClient.TabIndex = 50;
+            tblClient.CellContentClick += tblClient_CellContentClick;
             // 
             // btnClear
             // 
@@ -190,6 +181,7 @@
             btnClear.TabIndex = 48;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
             // btnDelete
             // 
@@ -203,6 +195,7 @@
             btnDelete.TabIndex = 47;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnUpdate
             // 
@@ -216,6 +209,7 @@
             btnUpdate.TabIndex = 46;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnAdd
             // 
@@ -229,6 +223,7 @@
             btnAdd.TabIndex = 45;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // lblPhoneNumber
             // 
@@ -281,44 +276,24 @@
             lblEmail.TabIndex = 52;
             lblEmail.Text = "Email";
             // 
-            // picDate
+            // pnFiller
             // 
-            picDate.Font = new Font("Microsoft Sans Serif", 12F);
-            picDate.Location = new Point(602, 706);
-            picDate.Margin = new Padding(4);
-            picDate.Name = "picDate";
-            picDate.ReadOnly = true;
-            picDate.Size = new Size(39, 26);
-            picDate.TabIndex = 66;
+            pnFiller.BackColor = Color.LightCoral;
+            pnFiller.Dock = DockStyle.Bottom;
+            pnFiller.Location = new Point(0, 840);
+            pnFiller.Margin = new Padding(3, 2, 3, 2);
+            pnFiller.Name = "pnFiller";
+            pnFiller.Size = new Size(1140, 60);
+            pnFiller.TabIndex = 67;
             // 
-            // panel2
+            // txtEmail
             // 
-            panel2.BackColor = Color.LightCoral;
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 840);
-            panel2.Margin = new Padding(3, 2, 3, 2);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1140, 60);
-            panel2.TabIndex = 67;
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Microsoft Sans Serif", 12F);
-            textBox1.Location = new Point(649, 706);
-            textBox1.Margin = new Padding(4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(260, 26);
-            textBox1.TabIndex = 68;
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Microsoft Sans Serif", 12F);
-            textBox2.Location = new Point(603, 609);
-            textBox2.Margin = new Padding(4);
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(39, 26);
-            textBox2.TabIndex = 70;
+            txtEmail.Font = new Font("Microsoft Sans Serif", 12F);
+            txtEmail.Location = new Point(649, 706);
+            txtEmail.Margin = new Padding(4);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(260, 26);
+            txtEmail.TabIndex = 68;
             // 
             // lblSex
             // 
@@ -327,19 +302,55 @@
             lblSex.Location = new Point(661, 578);
             lblSex.Margin = new Padding(5, 0, 5, 0);
             lblSex.Name = "lblSex";
-            lblSex.Size = new Size(43, 24);
+            lblSex.Size = new Size(74, 24);
             lblSex.TabIndex = 69;
-            lblSex.Text = "Sex";
+            lblSex.Text = "Gender";
             // 
-            // comboBox1
+            // cbSex
             // 
-            comboBox1.Font = new Font("Microsoft Sans Serif", 12F);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Male", "Female" });
-            comboBox1.Location = new Point(649, 605);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(160, 28);
-            comboBox1.TabIndex = 71;
+            cbSex.Font = new Font("Microsoft Sans Serif", 12F);
+            cbSex.FormattingEnabled = true;
+            cbSex.Items.AddRange(new object[] { "Male", "Female" });
+            cbSex.Location = new Point(649, 605);
+            cbSex.Name = "cbSex";
+            cbSex.Size = new Size(160, 28);
+            cbSex.TabIndex = 71;
+            // 
+            // picClientName
+            // 
+            picClientName.Image = Properties.Resources.icons8_book_64;
+            picClientName.Location = new Point(212, 578);
+            picClientName.Name = "picClientName";
+            picClientName.Size = new Size(64, 57);
+            picClientName.TabIndex = 72;
+            picClientName.TabStop = false;
+            // 
+            // picSex
+            // 
+            picSex.Image = (Image)resources.GetObject("picSex.Image");
+            picSex.Location = new Point(579, 578);
+            picSex.Name = "picSex";
+            picSex.Size = new Size(64, 55);
+            picSex.TabIndex = 73;
+            picSex.TabStop = false;
+            // 
+            // picPhoneNum
+            // 
+            picPhoneNum.Image = (Image)resources.GetObject("picPhoneNum.Image");
+            picPhoneNum.Location = new Point(212, 674);
+            picPhoneNum.Name = "picPhoneNum";
+            picPhoneNum.Size = new Size(64, 60);
+            picPhoneNum.TabIndex = 74;
+            picPhoneNum.TabStop = false;
+            // 
+            // picEmail
+            // 
+            picEmail.Image = Properties.Resources.icons8_email_64;
+            picEmail.Location = new Point(579, 674);
+            picEmail.Name = "picEmail";
+            picEmail.Size = new Size(64, 58);
+            picEmail.TabIndex = 75;
+            picEmail.TabStop = false;
             // 
             // MgClients
             // 
@@ -347,22 +358,22 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1140, 900);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox2);
+            Controls.Add(picEmail);
+            Controls.Add(picPhoneNum);
+            Controls.Add(picSex);
+            Controls.Add(picClientName);
+            Controls.Add(cbSex);
             Controls.Add(lblSex);
-            Controls.Add(textBox1);
-            Controls.Add(panel2);
-            Controls.Add(picDate);
+            Controls.Add(txtEmail);
+            Controls.Add(pnFiller);
             Controls.Add(txtPhoneNumber);
             Controls.Add(picLoad);
             Controls.Add(txtSearch);
-            Controls.Add(picPhoneNumber);
             Controls.Add(lbClientList);
-            Controls.Add(panel1);
+            Controls.Add(pnTitle);
             Controls.Add(btnSearch);
             Controls.Add(tblClient);
             Controls.Add(lblEmail);
-            Controls.Add(picClient);
             Controls.Add(btnClear);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
@@ -377,12 +388,17 @@
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)picLoad).EndInit();
             ((System.ComponentModel.ISupportInitialize)CloseForm).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            pnTitle.ResumeLayout(false);
+            pnTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tblClient).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picClientName).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picSex).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picPhoneNum).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picEmail).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
+
 
         #endregion
         private Label lblTotal;
@@ -390,39 +406,36 @@
         private TextBox tbUsername;
         private Label lblUserName;
         private Button btnUsers;
-        private Label label4;
+        private Label lblTitle;
         private PictureBox picLoad;
         private TextBox txtSearch;
-        private TextBox picPhoneNumber;
         private ContextMenuStrip contextMenuStrip1;
         private PictureBox CloseForm;
         private Label lbClientList;
         private TextBox txtNhaxuatban;
-        private Label label8;
-        private Panel panel1;
+        private Panel pnTitle;
         private Button btnSearch;
         private DataGridView tblClient;
         private DateTimePicker dtimerNhap;
-        private TextBox picClient;
         private Button btnClear;
         private Button btnDelete;
         private Button btnUpdate;
         private Button btnAdd;
         private TextBox txtGiasach;
         private TextBox txtSoluong;
-        private Label label6;
         private ComboBox cmbTheloai;
-        private Label label5;
         private Label lblPhoneNumber;
         private TextBox txtClientName;
         private Label lblCientName;
         private TextBox txtPhoneNumber;
         private Label lblEmail;
-        private TextBox picDate;
-        private Panel panel2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Panel pnFiller;
+        private TextBox txtEmail;
         private Label lblSex;
-        private ComboBox comboBox1;
+        private ComboBox cbSex;
+        private PictureBox picClientName;
+        private PictureBox picSex;
+        private PictureBox picPhoneNum;
+        private PictureBox picEmail;
     }
 }
