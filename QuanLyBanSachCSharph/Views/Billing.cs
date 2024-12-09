@@ -7,7 +7,7 @@ namespace BookShop
     public partial class Billing : Form
     {
         private BillController billController = new BillController();
-        private readonly DBConnect dbConnect = new DBConnect();
+        private DBConnect dbConnect = new DBConnect();
         private float gridTotal = 0;
         private int stock = 0;
         private int key = 0;
