@@ -42,7 +42,6 @@
             btnBook = new Button();
             btnDashboard = new Button();
             panel1 = new Panel();
-            label1 = new Label();
             pictureBox1 = new PictureBox();
             pnlCover = new Panel();
             panel6 = new Panel();
@@ -261,7 +260,6 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -269,21 +267,12 @@
             panel1.Size = new Size(259, 133);
             panel1.TabIndex = 3;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(99, 43);
-            label1.Name = "label1";
-            label1.Size = new Size(75, 28);
-            label1.TabIndex = 1;
-            label1.Text = "label1";
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 12);
+            pictureBox1.Location = new Point(63, 9);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(72, 76);
+            pictureBox1.Size = new Size(112, 115);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -528,7 +517,6 @@
             pnlUser.ResumeLayout(false);
             pnlbooks.ResumeLayout(false);
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pnlCover.ResumeLayout(false);
             panel6.ResumeLayout(false);
@@ -553,7 +541,6 @@
         #endregion
 
         private Panel pnlSlide;
-        private Label label1;
         private PictureBox pictureBox1;
         private Button btnBook;
         private Panel panel1;
