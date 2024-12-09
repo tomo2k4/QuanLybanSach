@@ -10,7 +10,7 @@ namespace QuanLyBanSachCSharph.Controllers
 {
     public class NguoidungController
     {
-        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\University\3 - 1\dot NET\QuanLyBanSach\QuanLyBanSachCSharph\QuanLyBanSach.mdf"";Integrated Security=True;Connect Timeout=30";
+        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\admin\source\repos\ManagementBookShop\QuanLyBanSachCSharph\QuanlyBookshop.mdf;Integrated Security=True;Connect Timeout=30";
 
         // Phương thức kiểm tra đăng nhập
         public bool Authenticate(NguoidungModel user)

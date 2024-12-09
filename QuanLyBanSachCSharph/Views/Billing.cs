@@ -19,20 +19,49 @@ namespace BookShop
             ShowData();
         }
 
+        DBConnect DBConnect = new DBConnect();
+        float gridTotal = 0;
+        int stock = 0;
+        int key = 0;
+        int n = 0;
+
         private void ShowData()
         {
-            dgvList.DataSource = billController.GetBooks();
+            String query = "SELECT * FROM Books";
+
+            using (SqlConnection conn = DBConnect.GetConnection())
+            {
+                conn.Open();
+
+                SqlDataAdapter sda = new SqlDataAdapter(query, conn);
+                SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+
+                var ds = new DataSet();
+                sda.Fill(ds);
+                dgvList.DataSource = ds.Tables[0];
+
+                conn.Close();
+            }
         }
 
         private void UpdateBook()
         {
             int newQty = stock - Convert.ToInt32(tbQuantity.Text);
 
+            string query = "UPDATE Books SET BQty = " + newQty + " WHERE BId = " + key + ";";
             try
             {
-                billController.UpdateBook(newQty, key);
+                using (SqlConnection conn = DBConnect.GetConnection())
+                {
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
                 MessageBox.Show("Book Updated Successfully!");
                 ShowData();
+
+                    conn.Close();
+                }
             }
             catch (Exception ex)
             {
@@ -81,6 +110,7 @@ namespace BookShop
                 }
 
                 newRow.CreateCells(dgvBill);
+
                 newRow.Cells[0].Value = ++n;
                 newRow.Cells[1].Value = tbBookName.Text;
                 newRow.Cells[2].Value = tbQuantity.Text;
@@ -90,8 +120,10 @@ namespace BookShop
                 dgvBill.Rows.Add(newRow);
 
                 UpdateBook();
+
                 gridTotal = gridTotal + total;
                 lblTotal.Text = "Total: " + gridTotal;
+
                 Reset();
             }
         }
