@@ -6,6 +6,13 @@ namespace BookShop
 {
     public partial class Billing : Form
     {
+        private BillController billController = new BillController();
+        private DBConnect DBConnect = new DBConnect();
+        private float gridTotal = 0;
+        private int stock = 0;
+        private int key = 0;
+        private int n = 0;
+
         public Billing()
         {
             InitializeComponent();
@@ -50,8 +57,8 @@ namespace BookShop
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Book Updated Successfully!");
-                    ShowData();
+                MessageBox.Show("Book Updated Successfully!");
+                ShowData();
 
                     conn.Close();
                 }
