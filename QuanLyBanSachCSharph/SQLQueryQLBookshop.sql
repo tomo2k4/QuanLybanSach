@@ -32,7 +32,7 @@ CREATE TABLE tbl_sach(
 	giasach MONEY,
 	soluong INT,
 	ngaynhan DATETIME,
-	trangthai NTEXT,
+	trangthai NVARCHAR(20),
 	anhsach IMAGE
 );
 
@@ -84,3 +84,12 @@ VALUES (N'Nam Cao', N'Văn học', N'Tác giả nổi tiếng với các tác ph
 	   (N'Rosie Nguyễn (Nguyễn Hoàng Nguyên)', N'Hài kịch', N'Nhà văn, một travel blogger và làm giảng viên của một lớp học kĩ năng và yoga'),
 	   (N'Dale Carnegie',N'Nhà văn và giảng viên', N' nhà văn và giảng viên người Mỹ nổi tiếng với các cuốn sách về cải thiện bản thân, giao tiếp công cộng và kỹ năng xã hội'),
 	   (N'Nguyễn Nhật Ánh', N'Nhà văn',N'nhà văn nổi tiếng của Việt Nam, chuyên viết các tác phẩm văn học thiếu nhi và thanh thiếu niên' );
+
+
+	   --5. Bảng Sách
+INSERT INTO tbl_sach (tensach, id_tacgia, id_theloai, nhaxuatban, giasach, soluong, ngaynhan, trangthai, anhsach) 
+VALUES (N'Chí Phèo', 1, 1, N'Nhà xuất bản văn học', 150000, 1, '2024-02-20', N'abc', 'D:\img_books\ms1.jpg'),
+	   (N'Tuổi trẻ đáng giá bao nhiêu', 4, 3, N'Nhã Nam', 70000, 1, '2024-02-22', N'abc', 'D:\img_books\ms2.jpg'),
+       (N'Giải thuật và lập trình', 3, 6, N'Nhà Xuất Bản Trẻ', 89000, 7, '2024-02-24', N'abc', 'D:\img_books\ms3.jpg'),
+	   (N'Đắc Nhân Tâm', 5, 7, N'Nhà xuất bản thế giới', 130000, 1, '2024-02-27', N'abc', 'D:\img_books\ms4.jpg'),
+	   (N'những tập thơ TỐ HỮU', 2,7,'Nhà xuất bản văn học', 90000, 1, '2024-02-27', N'abc', 'D:\img_books\ms5.jpg');

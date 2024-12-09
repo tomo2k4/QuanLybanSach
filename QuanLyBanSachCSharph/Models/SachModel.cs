@@ -20,21 +20,28 @@ namespace QuanLyBanSachCSharph.Models
         public string ngaynhan {  get; set; }
         public byte[] anhsach {  get; set; }
 
-        public SachModel(string mas, string tensach, string matg, string tacgia, string matl,
-            string theloai, string soLuong, string giasach, string nhaxb, string ngaynhan, byte[] anhSach)
-        { 
-            this.idsach = mas;
-            this.tensach = tensach;
-            this.idtacgia = matg;
-            this.tentacgia = tacgia;
-            this.idtheloai = matl;
-            this.tentheloai = theloai;  
-            this.soluong = soLuong;
-            this.giasach = giasach;
-            this.nhaxuatban = nhaxb;
-            this.ngaynhan = ngaynhan;
-            this.anhsach = anhSach;
+        public SachModel()
+        {
         }
+
+        public SachModel(string idsach, string tensach, string idtacgia, string tentacgia, string idtheloai,
+                 string tentheloai, string soluong, string giasach, string nhaxuatban,
+                 string ngaynhan, byte[] anhsach)
+        {
+            this.idsach = idsach;
+            this.tensach = tensach;
+            this.idtacgia = idtacgia;
+            this.tentacgia = tentacgia;
+            this.idtheloai = idtheloai;
+            this.tentheloai = tentheloai;
+            this.soluong = soluong;
+            this.giasach = giasach;
+            this.nhaxuatban = nhaxuatban;
+            this.ngaynhan = ngaynhan;
+            this.anhsach = anhsach;
+        }
+
+
 
 
     }

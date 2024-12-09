@@ -199,6 +199,7 @@
             lblWtk.Size = new Size(227, 18);
             lblWtk.TabIndex = 12;
             lblWtk.Text = "* Tài khoản không được để trống";
+            lblWtk.Visible = false;
             // 
             // lblWtkExist
             // 
@@ -210,6 +211,7 @@
             lblWtkExist.Size = new Size(175, 18);
             lblWtkExist.TabIndex = 13;
             lblWtkExist.Text = "* Tài khoản không tồn tại";
+            lblWtkExist.Visible = false;
             // 
             // lblAdSign
             // 

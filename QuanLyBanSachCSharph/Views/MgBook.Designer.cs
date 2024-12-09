@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MgBook));
             label4 = new Label();
             label2 = new Label();
@@ -63,6 +66,7 @@
             txtTim = new TextBox();
             picLoad = new PictureBox();
             button1 = new Button();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)picboxAnh).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tblSach).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CloseForm).BeginInit();
@@ -75,7 +79,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Roboto", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Brown;
-            label4.Location = new Point(461, 7);
+            label4.Location = new Point(462, 6);
             label4.Margin = new Padding(5, 0, 5, 0);
             label4.Name = "label4";
             label4.Size = new Size(217, 44);
@@ -86,7 +90,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Roboto", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(82, 528);
+            label2.Location = new Point(81, 527);
             label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
             label2.Size = new Size(116, 28);
@@ -113,17 +117,17 @@
             // txtTensach
             // 
             txtTensach.Font = new Font("Roboto", 12F);
-            txtTensach.Location = new Point(70, 559);
-            txtTensach.Margin = new Padding(4);
+            txtTensach.Location = new Point(70, 558);
+            txtTensach.Margin = new Padding(3, 5, 3, 5);
             txtTensach.Name = "txtTensach";
-            txtTensach.Size = new Size(239, 32);
+            txtTensach.Size = new Size(240, 32);
             txtTensach.TabIndex = 4;
             // 
             // txtTacgia
             // 
             txtTacgia.Font = new Font("Roboto", 12F);
-            txtTacgia.Location = new Point(395, 559);
-            txtTacgia.Margin = new Padding(4);
+            txtTacgia.Location = new Point(395, 558);
+            txtTacgia.Margin = new Padding(3, 5, 3, 5);
             txtTacgia.Name = "txtTacgia";
             txtTacgia.Size = new Size(238, 32);
             txtTacgia.TabIndex = 5;
@@ -132,7 +136,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Roboto", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(82, 624);
+            label3.Location = new Point(81, 624);
             label3.Margin = new Padding(5, 0, 5, 0);
             label3.Name = "label3";
             label3.Size = new Size(85, 28);
@@ -143,7 +147,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Roboto", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(461, 624);
+            label5.Location = new Point(462, 624);
             label5.Margin = new Padding(5, 0, 5, 0);
             label5.Name = "label5";
             label5.Size = new Size(100, 28);
@@ -155,10 +159,11 @@
             cmbTheloai.Font = new Font("Roboto", 12F);
             cmbTheloai.FormattingEnabled = true;
             cmbTheloai.Location = new Point(70, 656);
-            cmbTheloai.Margin = new Padding(4);
+            cmbTheloai.Margin = new Padding(3, 5, 3, 5);
             cmbTheloai.Name = "cmbTheloai";
-            cmbTheloai.Size = new Size(317, 32);
+            cmbTheloai.Size = new Size(318, 32);
             cmbTheloai.TabIndex = 8;
+            cmbTheloai.SelectedIndexChanged += cmbTheloai_SelectedIndexChanged;
             // 
             // label6
             // 
@@ -174,17 +179,17 @@
             // txtSoluong
             // 
             txtSoluong.Font = new Font("Roboto", 12F);
-            txtSoluong.Location = new Point(461, 656);
-            txtSoluong.Margin = new Padding(4);
+            txtSoluong.Location = new Point(462, 656);
+            txtSoluong.Margin = new Padding(3, 5, 3, 5);
             txtSoluong.Name = "txtSoluong";
-            txtSoluong.Size = new Size(122, 32);
+            txtSoluong.Size = new Size(123, 32);
             txtSoluong.TabIndex = 10;
             // 
             // txtGiasach
             // 
             txtGiasach.Font = new Font("Roboto", 12F);
             txtGiasach.Location = new Point(619, 656);
-            txtGiasach.Margin = new Padding(4);
+            txtGiasach.Margin = new Padding(3, 5, 3, 5);
             txtGiasach.Name = "txtGiasach";
             txtGiasach.Size = new Size(209, 32);
             txtGiasach.TabIndex = 11;
@@ -194,8 +199,8 @@
             btnThem.BackColor = Color.Brown;
             btnThem.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnThem.ForeColor = Color.White;
-            btnThem.Location = new Point(175, 826);
-            btnThem.Margin = new Padding(4);
+            btnThem.Location = new Point(176, 826);
+            btnThem.Margin = new Padding(3, 5, 3, 5);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(130, 44);
             btnThem.TabIndex = 12;
@@ -208,8 +213,8 @@
             btnSua.BackColor = Color.Brown;
             btnSua.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSua.ForeColor = Color.White;
-            btnSua.Location = new Point(391, 826);
-            btnSua.Margin = new Padding(4);
+            btnSua.Location = new Point(384, 826);
+            btnSua.Margin = new Padding(3, 5, 3, 5);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(130, 44);
             btnSua.TabIndex = 13;
@@ -223,7 +228,7 @@
             btnXoa.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnXoa.ForeColor = Color.White;
             btnXoa.Location = new Point(608, 826);
-            btnXoa.Margin = new Padding(4);
+            btnXoa.Margin = new Padding(3, 5, 3, 5);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(130, 44);
             btnXoa.TabIndex = 14;
@@ -236,8 +241,8 @@
             btnHuy.BackColor = Color.Brown;
             btnHuy.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnHuy.ForeColor = Color.White;
-            btnHuy.Location = new Point(818, 826);
-            btnHuy.Margin = new Padding(4);
+            btnHuy.Location = new Point(812, 826);
+            btnHuy.Margin = new Padding(3, 5, 3, 5);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(130, 44);
             btnHuy.TabIndex = 15;
@@ -247,10 +252,10 @@
             // 
             // picboxAnh
             // 
-            picboxAnh.Location = new Point(898, 525);
-            picboxAnh.Margin = new Padding(4);
+            picboxAnh.Location = new Point(938, 527);
+            picboxAnh.Margin = new Padding(3, 5, 3, 5);
             picboxAnh.Name = "picboxAnh";
-            picboxAnh.Size = new Size(170, 217);
+            picboxAnh.Size = new Size(171, 218);
             picboxAnh.SizeMode = PictureBoxSizeMode.StretchImage;
             picboxAnh.TabIndex = 16;
             picboxAnh.TabStop = false;
@@ -258,20 +263,20 @@
             // txtMasach
             // 
             txtMasach.Font = new Font("Roboto", 12F);
-            txtMasach.Location = new Point(24, 559);
-            txtMasach.Margin = new Padding(4);
+            txtMasach.Location = new Point(24, 558);
+            txtMasach.Margin = new Padding(3, 5, 3, 5);
             txtMasach.Name = "txtMasach";
             txtMasach.ReadOnly = true;
-            txtMasach.Size = new Size(39, 32);
+            txtMasach.Size = new Size(40, 32);
             txtMasach.TabIndex = 17;
             // 
             // dtimerNhap
             // 
             dtimerNhap.Font = new Font("Roboto", 12F);
-            dtimerNhap.Location = new Point(461, 746);
-            dtimerNhap.Margin = new Padding(4);
+            dtimerNhap.Location = new Point(462, 747);
+            dtimerNhap.Margin = new Padding(3, 5, 3, 5);
             dtimerNhap.Name = "dtimerNhap";
-            dtimerNhap.Size = new Size(367, 32);
+            dtimerNhap.Size = new Size(366, 32);
             dtimerNhap.TabIndex = 18;
             // 
             // label7
@@ -287,10 +292,34 @@
             // 
             // tblSach
             // 
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Roboto", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            tblSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             tblSach.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Roboto", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            tblSach.DefaultCellStyle = dataGridViewCellStyle2;
             tblSach.Location = new Point(20, 118);
-            tblSach.Margin = new Padding(4);
+            tblSach.Margin = new Padding(3, 5, 3, 5);
             tblSach.Name = "tblSach";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Roboto", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            tblSach.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             tblSach.RowHeadersWidth = 51;
             tblSach.Size = new Size(1100, 390);
             tblSach.TabIndex = 21;
@@ -300,9 +329,9 @@
             // 
             CloseForm.Image = (Image)resources.GetObject("CloseForm.Image");
             CloseForm.Location = new Point(1092, 0);
-            CloseForm.Margin = new Padding(4);
+            CloseForm.Margin = new Padding(3, 5, 3, 5);
             CloseForm.Name = "CloseForm";
-            CloseForm.Size = new Size(48, 40);
+            CloseForm.Size = new Size(49, 40);
             CloseForm.SizeMode = PictureBoxSizeMode.CenterImage;
             CloseForm.TabIndex = 22;
             CloseForm.TabStop = false;
@@ -314,9 +343,9 @@
             btnTim.Font = new Font("Roboto", 13.2000008F);
             btnTim.ForeColor = Color.White;
             btnTim.Location = new Point(938, 67);
-            btnTim.Margin = new Padding(4);
+            btnTim.Margin = new Padding(3, 5, 3, 5);
             btnTim.Name = "btnTim";
-            btnTim.Size = new Size(130, 46);
+            btnTim.Size = new Size(130, 47);
             btnTim.TabIndex = 24;
             btnTim.Text = "Search";
             btnTim.UseVisualStyleBackColor = false;
@@ -326,10 +355,10 @@
             btnTaianh.BackColor = Color.IndianRed;
             btnTaianh.Font = new Font("Roboto", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnTaianh.ForeColor = Color.White;
-            btnTaianh.Location = new Point(898, 750);
-            btnTaianh.Margin = new Padding(4);
+            btnTaianh.Location = new Point(938, 753);
+            btnTaianh.Margin = new Padding(3, 5, 3, 5);
             btnTaianh.Name = "btnTaianh";
-            btnTaianh.Size = new Size(170, 40);
+            btnTaianh.Size = new Size(171, 40);
             btnTaianh.TabIndex = 25;
             btnTaianh.Text = "Upload";
             btnTaianh.UseVisualStyleBackColor = false;
@@ -341,9 +370,9 @@
             panel1.Controls.Add(CloseForm);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(4);
+            panel1.Margin = new Padding(3, 5, 3, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1140, 58);
+            panel1.Size = new Size(1141, 58);
             panel1.TabIndex = 26;
             // 
             // label8
@@ -360,10 +389,10 @@
             // txtNhaxuatban
             // 
             txtNhaxuatban.Font = new Font("Roboto", 12F);
-            txtNhaxuatban.Location = new Point(70, 746);
-            txtNhaxuatban.Margin = new Padding(4);
+            txtNhaxuatban.Location = new Point(70, 747);
+            txtNhaxuatban.Margin = new Padding(3, 5, 3, 5);
             txtNhaxuatban.Name = "txtNhaxuatban";
-            txtNhaxuatban.Size = new Size(317, 32);
+            txtNhaxuatban.Size = new Size(318, 32);
             txtNhaxuatban.TabIndex = 28;
             // 
             // label9
@@ -381,21 +410,21 @@
             // txtMatg
             // 
             txtMatg.Font = new Font("Roboto", 12F);
-            txtMatg.Location = new Point(348, 559);
-            txtMatg.Margin = new Padding(4);
+            txtMatg.Location = new Point(348, 558);
+            txtMatg.Margin = new Padding(3, 5, 3, 5);
             txtMatg.Name = "txtMatg";
             txtMatg.ReadOnly = true;
-            txtMatg.Size = new Size(39, 32);
+            txtMatg.Size = new Size(40, 32);
             txtMatg.TabIndex = 31;
             // 
             // txtMatl
             // 
             txtMatl.Font = new Font("Roboto", 12F);
             txtMatl.Location = new Point(24, 656);
-            txtMatl.Margin = new Padding(4);
+            txtMatl.Margin = new Padding(3, 5, 3, 5);
             txtMatl.Name = "txtMatl";
             txtMatl.ReadOnly = true;
-            txtMatl.Size = new Size(39, 32);
+            txtMatl.Size = new Size(40, 32);
             txtMatl.TabIndex = 32;
             txtMatl.TextChanged += txtMatl_TextChanged;
             // 
@@ -404,7 +433,7 @@
             txtTim.BorderStyle = BorderStyle.FixedSingle;
             txtTim.Font = new Font("Roboto", 12F);
             txtTim.Location = new Point(670, 76);
-            txtTim.Margin = new Padding(4);
+            txtTim.Margin = new Padding(3, 5, 3, 5);
             txtTim.Name = "txtTim";
             txtTim.Size = new Size(260, 32);
             txtTim.TabIndex = 33;
@@ -413,12 +442,13 @@
             // 
             picLoad.Image = (Image)resources.GetObject("picLoad.Image");
             picLoad.Location = new Point(1076, 68);
-            picLoad.Margin = new Padding(4);
+            picLoad.Margin = new Padding(3, 5, 3, 5);
             picLoad.Name = "picLoad";
-            picLoad.Size = new Size(48, 40);
+            picLoad.Size = new Size(49, 40);
             picLoad.SizeMode = PictureBoxSizeMode.CenterImage;
             picLoad.TabIndex = 23;
             picLoad.TabStop = false;
+            picLoad.Click += picLoad_Click;
             // 
             // button1
             // 
@@ -426,19 +456,29 @@
             button1.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
             button1.Location = new Point(647, 552);
-            button1.Margin = new Padding(4);
+            button1.Margin = new Padding(3, 5, 3, 5);
             button1.Name = "button1";
-            button1.Size = new Size(181, 44);
+            button1.Size = new Size(180, 44);
             button1.TabIndex = 34;
             button1.Text = "Choose Author";
             button1.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Roboto", 12F);
+            textBox1.Location = new Point(218, 75);
+            textBox1.Margin = new Padding(3, 5, 3, 5);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(209, 32);
+            textBox1.TabIndex = 35;
             // 
             // MgBook
             // 
             AutoScaleDimensions = new SizeF(13F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1140, 899);
+            ClientSize = new Size(1141, 899);
+            Controls.Add(textBox1);
             Controls.Add(button1);
             Controls.Add(picLoad);
             Controls.Add(txtTim);
@@ -471,10 +511,11 @@
             Controls.Add(label2);
             Font = new Font("Roboto", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(5, 4, 5, 4);
+            Margin = new Padding(5);
             Name = "MgBook";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MgBook";
+            Load += MgBook_Load_1;
             ((System.ComponentModel.ISupportInitialize)picboxAnh).EndInit();
             ((System.ComponentModel.ISupportInitialize)tblSach).EndInit();
             ((System.ComponentModel.ISupportInitialize)CloseForm).EndInit();
@@ -520,5 +561,6 @@
         private TextBox txtTim;
         private PictureBox picLoad;
         private Button button1;
+        private TextBox textBox1;
     }
 }
