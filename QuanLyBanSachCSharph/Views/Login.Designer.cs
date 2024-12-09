@@ -42,6 +42,8 @@
             label3 = new Label();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             lblMessage = new Label();
+            label4 = new Label();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)CloseForm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MinForm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -122,13 +124,13 @@
             // lblclose
             // 
             lblclose.Image = (Image)resources.GetObject("lblclose.Image");
-            lblclose.Location = new Point(729, 266);
+            lblclose.Location = new Point(729, 220);
             lblclose.Name = "lblclose";
             lblclose.Size = new Size(48, 40);
             lblclose.SizeMode = PictureBoxSizeMode.CenterImage;
             lblclose.TabIndex = 7;
             lblclose.TabStop = false;
-            lblclose.Click += eyeclose_Click;
+            lblclose.Click += lblclose_Click;
             // 
             // lblopen
             // 
@@ -178,6 +180,29 @@
             lblMessage.Size = new Size(81, 20);
             lblMessage.TabIndex = 11;
             lblMessage.Text = "Thông báo";
+            lblMessage.Visible = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Roboto", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.OrangeRed;
+            label4.Location = new Point(369, 187);
+            label4.Name = "label4";
+            label4.Size = new Size(227, 18);
+            label4.TabIndex = 12;
+            label4.Text = "* Tài khoản không được để trống";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Roboto", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.OrangeRed;
+            label5.Location = new Point(620, 187);
+            label5.Name = "label5";
+            label5.Size = new Size(175, 18);
+            label5.TabIndex = 13;
+            label5.Text = "* Tài khoản không tồn tại";
             // 
             // Login
             // 
@@ -185,6 +210,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Moccasin;
             ClientSize = new Size(800, 415);
+            Controls.Add(label5);
+            Controls.Add(label4);
             Controls.Add(lblMessage);
             Controls.Add(label3);
             Controls.Add(btnLogin);
@@ -226,5 +253,7 @@
         private Label label3;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
         private Label lblMessage;
+        private Label label4;
+        private Label label5;
     }
 }
