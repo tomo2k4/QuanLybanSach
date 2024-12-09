@@ -262,6 +262,7 @@
             Controls.Add(label3);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Theloai";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Theloai";
             ((System.ComponentModel.ISupportInitialize)CloseForm).EndInit();
             ((System.ComponentModel.ISupportInitialize)picLoad).EndInit();
