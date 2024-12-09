@@ -294,6 +294,7 @@
             tblSach.RowHeadersWidth = 51;
             tblSach.Size = new Size(1100, 390);
             tblSach.TabIndex = 21;
+            tblSach.CellContentClick += tblSach_CellContentClick;
             // 
             // CloseForm
             // 
