@@ -58,7 +58,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.SaddleBrown;
+            panel1.BackColor = Color.Black;
             panel1.Controls.Add(btnLogOut);
             panel1.Controls.Add(lblTitle);
             panel1.Location = new Point(12, 12);
@@ -68,7 +68,7 @@
             // 
             // btnLogOut
             // 
-            btnLogOut.BackColor = Color.SaddleBrown;
+            btnLogOut.BackColor = Color.Black;
             btnLogOut.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLogOut.ForeColor = Color.White;
             btnLogOut.Location = new Point(11, 671);
