@@ -68,8 +68,8 @@ namespace BookShop
 
                 float total = quantity * price;
 
-                DataGridViewRow newRow = new DataGridViewRow();        
-                
+                DataGridViewRow newRow = new DataGridViewRow();
+
                 // Đảm bảo rằng các cột trong dgvBill đã được tạo
                 if (dgvBill.Columns.Count == 0)
                 {
@@ -109,7 +109,7 @@ namespace BookShop
                 tbBookName.Text = dgvList.SelectedRows[0].Cells[1].Value.ToString();
                 tbQuantity.Text = dgvList.SelectedRows[0].Cells[4].Value.ToString();
                 tbPrice.Text = dgvList.SelectedRows[0].Cells[5].Value.ToString();
-                
+
                 key = Convert.ToInt32(dgvList.SelectedRows[0].Cells[0].Value.ToString());
                 stock = Convert.ToInt32(dgvList.SelectedRows[0].Cells[4].Value.ToString());
             }
@@ -118,6 +118,11 @@ namespace BookShop
                 key = 0;
                 stock = 0;
             }
+        }
+
+        private void CloseForm_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

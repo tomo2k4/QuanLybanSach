@@ -28,306 +28,360 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel2 = new Panel();
-            btnAdd = new Button();
-            btnEdit = new Button();
-            btnDelete = new Button();
-            btnReset = new Button();
-            lblMiniTitle = new Label();
-            lblList = new Label();
-            tbAddress = new TextBox();
-            tbPhoneNumber = new TextBox();
-            tbClientName = new TextBox();
-            lblAddress = new Label();
-            lblPhoneNumber = new Label();
-            lblClientName = new Label();
-            dgvList = new DataGridView();
-            btnBooks = new Button();
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clients));
+            label4 = new Label();
+            picLoad = new PictureBox();
+            txtSearch = new TextBox();
+            picPhoneNumber = new TextBox();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            CloseForm = new PictureBox();
+            lbClientList = new Label();
             panel1 = new Panel();
-            btnDashboard = new Button();
-            btnClients = new Button();
-            btnLogOut = new Button();
-            lblTitle = new Label();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvList).BeginInit();
+            btnSearch = new Button();
+            tblClient = new DataGridView();
+            dtimerNhap = new DateTimePicker();
+            picClient = new TextBox();
+            btnClear = new Button();
+            btnDelete = new Button();
+            btnUpdate = new Button();
+            btnAdd = new Button();
+            lblPhoneNumber = new Label();
+            txtClientName = new TextBox();
+            lblCientName = new Label();
+            txtPhoneNumber = new TextBox();
+            label7 = new Label();
+            picDate = new TextBox();
+            panel2 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)picLoad).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CloseForm).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)tblClient).BeginInit();
             SuspendLayout();
             // 
-            // panel2
+            // label4
             // 
-            panel2.BackColor = Color.White;
-            panel2.Controls.Add(btnAdd);
-            panel2.Controls.Add(btnEdit);
-            panel2.Controls.Add(btnDelete);
-            panel2.Controls.Add(btnReset);
-            panel2.Controls.Add(lblMiniTitle);
-            panel2.Controls.Add(lblList);
-            panel2.Controls.Add(tbAddress);
-            panel2.Controls.Add(tbPhoneNumber);
-            panel2.Controls.Add(tbClientName);
-            panel2.Controls.Add(lblAddress);
-            panel2.Controls.Add(lblPhoneNumber);
-            panel2.Controls.Add(lblClientName);
-            panel2.Controls.Add(dgvList);
-            panel2.Location = new Point(205, 12);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1047, 737);
-            panel2.TabIndex = 3;
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Brown;
+            label4.Location = new Point(461, 7);
+            label4.Margin = new Padding(5, 0, 5, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(190, 36);
+            label4.TabIndex = 0;
+            label4.Text = "BOOKSHOP";
             // 
-            // btnAdd
+            // picLoad
             // 
-            btnAdd.BackColor = Color.ForestGreen;
-            btnAdd.Font = new Font("Microsoft Sans Serif", 15.75F);
-            btnAdd.ForeColor = Color.White;
-            btnAdd.Location = new Point(293, 201);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(100, 42);
-            btnAdd.TabIndex = 18;
-            btnAdd.Text = "Add";
-            btnAdd.UseVisualStyleBackColor = false;
+            picLoad.Image = (Image)resources.GetObject("picLoad.Image");
+            picLoad.Location = new Point(1076, 63);
+            picLoad.Margin = new Padding(4);
+            picLoad.Name = "picLoad";
+            picLoad.Size = new Size(48, 40);
+            picLoad.SizeMode = PictureBoxSizeMode.CenterImage;
+            picLoad.TabIndex = 54;
+            picLoad.TabStop = false;
             // 
-            // btnEdit
+            // txtSearch
             // 
-            btnEdit.BackColor = Color.ForestGreen;
-            btnEdit.Font = new Font("Microsoft Sans Serif", 15.75F);
-            btnEdit.ForeColor = Color.White;
-            btnEdit.Location = new Point(415, 201);
-            btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(100, 42);
-            btnEdit.TabIndex = 17;
-            btnEdit.Text = "Edit";
-            btnEdit.UseVisualStyleBackColor = false;
+            txtSearch.BorderStyle = BorderStyle.FixedSingle;
+            txtSearch.Font = new Font("Microsoft Sans Serif", 12F);
+            txtSearch.Location = new Point(670, 71);
+            txtSearch.Margin = new Padding(4);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(260, 26);
+            txtSearch.TabIndex = 63;
+            // 
+            // picPhoneNumber
+            // 
+            picPhoneNumber.Font = new Font("Microsoft Sans Serif", 12F);
+            picPhoneNumber.Location = new Point(249, 706);
+            picPhoneNumber.Margin = new Padding(4);
+            picPhoneNumber.Name = "picPhoneNumber";
+            picPhoneNumber.ReadOnly = true;
+            picPhoneNumber.Size = new Size(39, 26);
+            picPhoneNumber.TabIndex = 62;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
+            // 
+            // CloseForm
+            // 
+            CloseForm.Image = (Image)resources.GetObject("CloseForm.Image");
+            CloseForm.Location = new Point(1092, 0);
+            CloseForm.Margin = new Padding(4);
+            CloseForm.Name = "CloseForm";
+            CloseForm.Size = new Size(48, 40);
+            CloseForm.SizeMode = PictureBoxSizeMode.CenterImage;
+            CloseForm.TabIndex = 22;
+            CloseForm.TabStop = false;
+            // 
+            // lbClientList
+            // 
+            lbClientList.AutoSize = true;
+            lbClientList.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbClientList.ForeColor = Color.Brown;
+            lbClientList.Location = new Point(494, 71);
+            lbClientList.Margin = new Padding(5, 0, 5, 0);
+            lbClientList.Name = "lbClientList";
+            lbClientList.Size = new Size(126, 26);
+            lbClientList.TabIndex = 60;
+            lbClientList.Text = "Client List ";
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(CloseForm);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1140, 58);
+            panel1.TabIndex = 57;
+            // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = Color.IndianRed;
+            btnSearch.Font = new Font("Microsoft Sans Serif", 13.2000008F);
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(938, 62);
+            btnSearch.Margin = new Padding(4);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(130, 46);
+            btnSearch.TabIndex = 55;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // tblClient
+            // 
+            tblClient.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tblClient.Location = new Point(20, 113);
+            tblClient.Margin = new Padding(4);
+            tblClient.Name = "tblClient";
+            tblClient.RowHeadersWidth = 51;
+            tblClient.Size = new Size(1100, 440);
+            tblClient.TabIndex = 53;
+            // 
+            // dtimerNhap
+            // 
+            dtimerNhap.Font = new Font("Microsoft Sans Serif", 12F);
+            dtimerNhap.Location = new Point(620, 706);
+            dtimerNhap.Margin = new Padding(4);
+            dtimerNhap.Name = "dtimerNhap";
+            dtimerNhap.Size = new Size(300, 26);
+            dtimerNhap.TabIndex = 51;
+            // 
+            // picClient
+            // 
+            picClient.Font = new Font("Microsoft Sans Serif", 12F);
+            picClient.Location = new Point(249, 609);
+            picClient.Margin = new Padding(4);
+            picClient.Name = "picClient";
+            picClient.ReadOnly = true;
+            picClient.Size = new Size(39, 26);
+            picClient.TabIndex = 50;
+            // 
+            // btnClear
+            // 
+            btnClear.BackColor = Color.Brown;
+            btnClear.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClear.ForeColor = Color.White;
+            btnClear.Location = new Point(830, 769);
+            btnClear.Margin = new Padding(4);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(130, 44);
+            btnClear.TabIndex = 48;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = false;
             // 
             // btnDelete
             // 
-            btnDelete.BackColor = Color.ForestGreen;
-            btnDelete.Font = new Font("Microsoft Sans Serif", 15.75F);
+            btnDelete.BackColor = Color.Brown;
+            btnDelete.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDelete.ForeColor = Color.White;
-            btnDelete.Location = new Point(535, 201);
+            btnDelete.Location = new Point(620, 769);
+            btnDelete.Margin = new Padding(4);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(100, 42);
-            btnDelete.TabIndex = 16;
+            btnDelete.Size = new Size(130, 44);
+            btnDelete.TabIndex = 47;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
             // 
-            // btnReset
+            // btnUpdate
             // 
-            btnReset.BackColor = Color.ForestGreen;
-            btnReset.Font = new Font("Microsoft Sans Serif", 15.75F);
-            btnReset.ForeColor = Color.White;
-            btnReset.Location = new Point(655, 201);
-            btnReset.Name = "btnReset";
-            btnReset.Size = new Size(100, 42);
-            btnReset.TabIndex = 15;
-            btnReset.Text = "Reset";
-            btnReset.UseVisualStyleBackColor = false;
+            btnUpdate.BackColor = Color.Brown;
+            btnUpdate.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUpdate.ForeColor = Color.White;
+            btnUpdate.Location = new Point(403, 769);
+            btnUpdate.Margin = new Padding(4);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(130, 44);
+            btnUpdate.TabIndex = 46;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = false;
             // 
-            // lblMiniTitle
+            // btnAdd
             // 
-            lblMiniTitle.AutoSize = true;
-            lblMiniTitle.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMiniTitle.ForeColor = Color.ForestGreen;
-            lblMiniTitle.Location = new Point(460, 10);
-            lblMiniTitle.Name = "lblMiniTitle";
-            lblMiniTitle.Size = new Size(119, 25);
-            lblMiniTitle.TabIndex = 12;
-            lblMiniTitle.Text = "BookShop";
-            // 
-            // lblList
-            // 
-            lblList.AutoSize = true;
-            lblList.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblList.ForeColor = Color.ForestGreen;
-            lblList.Location = new Point(443, 264);
-            lblList.Name = "lblList";
-            lblList.Size = new Size(160, 31);
-            lblList.TabIndex = 10;
-            lblList.Text = "Clients List";
-            // 
-            // tbAddress
-            // 
-            tbAddress.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbAddress.Location = new Point(508, 136);
-            tbAddress.Name = "tbAddress";
-            tbAddress.Size = new Size(220, 31);
-            tbAddress.TabIndex = 8;
-            // 
-            // tbPhoneNumber
-            // 
-            tbPhoneNumber.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbPhoneNumber.Location = new Point(268, 136);
-            tbPhoneNumber.Name = "tbPhoneNumber";
-            tbPhoneNumber.Size = new Size(220, 31);
-            tbPhoneNumber.TabIndex = 7;
-            // 
-            // tbClientName
-            // 
-            tbClientName.Enabled = false;
-            tbClientName.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbClientName.Location = new Point(26, 136);
-            tbClientName.Name = "tbClientName";
-            tbClientName.Size = new Size(220, 31);
-            tbClientName.TabIndex = 6;
-            // 
-            // lblAddress
-            // 
-            lblAddress.AutoSize = true;
-            lblAddress.BackColor = SystemColors.Window;
-            lblAddress.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAddress.Location = new Point(508, 101);
-            lblAddress.Name = "lblAddress";
-            lblAddress.Size = new Size(91, 25);
-            lblAddress.TabIndex = 4;
-            lblAddress.Text = "Address";
+            btnAdd.BackColor = Color.Brown;
+            btnAdd.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Location = new Point(187, 769);
+            btnAdd.Margin = new Padding(4);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(130, 44);
+            btnAdd.TabIndex = 45;
+            btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = false;
             // 
             // lblPhoneNumber
             // 
             lblPhoneNumber.AutoSize = true;
-            lblPhoneNumber.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPhoneNumber.Location = new Point(268, 102);
+            lblPhoneNumber.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPhoneNumber.Location = new Point(307, 674);
+            lblPhoneNumber.Margin = new Padding(5, 0, 5, 0);
             lblPhoneNumber.Name = "lblPhoneNumber";
-            lblPhoneNumber.Size = new Size(155, 25);
-            lblPhoneNumber.TabIndex = 3;
+            lblPhoneNumber.Size = new Size(140, 24);
+            lblPhoneNumber.TabIndex = 39;
             lblPhoneNumber.Text = "Phone Number";
             // 
-            // lblClientName
+            // txtClientName
             // 
-            lblClientName.AutoSize = true;
-            lblClientName.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblClientName.Location = new Point(26, 102);
-            lblClientName.Name = "lblClientName";
-            lblClientName.Size = new Size(129, 25);
-            lblClientName.TabIndex = 2;
-            lblClientName.Text = "Client Name";
+            txtClientName.Font = new Font("Microsoft Sans Serif", 12F);
+            txtClientName.Location = new Point(295, 609);
+            txtClientName.Margin = new Padding(4);
+            txtClientName.Name = "txtClientName";
+            txtClientName.Size = new Size(300, 26);
+            txtClientName.TabIndex = 37;
             // 
-            // dgvList
+            // lblCientName
             // 
-            dgvList.BackgroundColor = Color.White;
-            dgvList.BorderStyle = BorderStyle.Fixed3D;
-            dgvList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvList.Location = new Point(0, 317);
-            dgvList.MultiSelect = false;
-            dgvList.Name = "dgvList";
-            dgvList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvList.Size = new Size(1047, 420);
-            dgvList.TabIndex = 1;
+            lblCientName.AutoSize = true;
+            lblCientName.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCientName.Location = new Point(307, 578);
+            lblCientName.Margin = new Padding(5, 0, 5, 0);
+            lblCientName.Name = "lblCientName";
+            lblCientName.Size = new Size(113, 24);
+            lblCientName.TabIndex = 35;
+            lblCientName.Text = "Client Name";
             // 
-            // btnBooks
+            // txtPhoneNumber
             // 
-            btnBooks.BackColor = Color.Black;
-            btnBooks.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBooks.ForeColor = Color.White;
-            btnBooks.Location = new Point(14, 125);
-            btnBooks.Name = "btnBooks";
-            btnBooks.Size = new Size(170, 52);
-            btnBooks.TabIndex = 13;
-            btnBooks.Text = "Books";
-            btnBooks.UseVisualStyleBackColor = false;
+            txtPhoneNumber.Font = new Font("Microsoft Sans Serif", 12F);
+            txtPhoneNumber.Location = new Point(296, 706);
+            txtPhoneNumber.Margin = new Padding(4);
+            txtPhoneNumber.Name = "txtPhoneNumber";
+            txtPhoneNumber.Size = new Size(239, 26);
+            txtPhoneNumber.TabIndex = 65;
             // 
-            // panel1
+            // label7
             // 
-            panel1.BackColor = Color.Black;
-            panel1.Controls.Add(btnDashboard);
-            panel1.Controls.Add(btnClients);
-            panel1.Controls.Add(btnLogOut);
-            panel1.Controls.Add(lblTitle);
-            panel1.Controls.Add(btnBooks);
-            panel1.Location = new Point(12, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(200, 737);
-            panel1.TabIndex = 2;
+            label7.AutoSize = true;
+            label7.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(631, 674);
+            label7.Margin = new Padding(5, 0, 5, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(149, 24);
+            label7.TabIndex = 52;
+            label7.Text = "Date Of Joinning";
             // 
-            // btnDashboard
+            // picDate
             // 
-            btnDashboard.BackColor = Color.Black;
-            btnDashboard.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDashboard.ForeColor = Color.White;
-            btnDashboard.Location = new Point(14, 325);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(170, 52);
-            btnDashboard.TabIndex = 18;
-            btnDashboard.Text = "Dashboard";
-            btnDashboard.UseVisualStyleBackColor = false;
+            picDate.Font = new Font("Microsoft Sans Serif", 12F);
+            picDate.Location = new Point(573, 706);
+            picDate.Margin = new Padding(4);
+            picDate.Name = "picDate";
+            picDate.ReadOnly = true;
+            picDate.Size = new Size(39, 26);
+            picDate.TabIndex = 66;
             // 
-            // btnClients
+            // panel2
             // 
-            btnClients.BackColor = Color.ForestGreen;
-            btnClients.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnClients.ForeColor = Color.White;
-            btnClients.Location = new Point(14, 224);
-            btnClients.Name = "btnClients";
-            btnClients.Size = new Size(170, 52);
-            btnClients.TabIndex = 17;
-            btnClients.Text = "Clients";
-            btnClients.UseVisualStyleBackColor = false;
+            panel2.BackColor = Color.LightCoral;
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 840);
+            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1140, 60);
+            panel2.TabIndex = 67;
             // 
-            // btnLogOut
-            // 
-            btnLogOut.BackColor = Color.Black;
-            btnLogOut.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogOut.ForeColor = Color.White;
-            btnLogOut.Location = new Point(11, 671);
-            btnLogOut.Name = "btnLogOut";
-            btnLogOut.Size = new Size(173, 50);
-            btnLogOut.TabIndex = 16;
-            btnLogOut.Text = "Log Out";
-            btnLogOut.UseVisualStyleBackColor = false;
-            // 
-            // lblTitle
-            // 
-            lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.ForeColor = Color.White;
-            lblTitle.Location = new Point(14, 23);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(173, 37);
-            lblTitle.TabIndex = 12;
-            lblTitle.Text = "BookShop";
-            // 
-            // Users
+            // Clients
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkGreen;
-            ClientSize = new Size(1264, 761);
+            BackColor = Color.White;
+            ClientSize = new Size(1140, 900);
             Controls.Add(panel2);
+            Controls.Add(picDate);
+            Controls.Add(txtPhoneNumber);
+            Controls.Add(picLoad);
+            Controls.Add(txtSearch);
+            Controls.Add(picPhoneNumber);
+            Controls.Add(lbClientList);
             Controls.Add(panel1);
-            Name = "Users";
+            Controls.Add(btnSearch);
+            Controls.Add(tblClient);
+            Controls.Add(label7);
+            Controls.Add(dtimerNhap);
+            Controls.Add(picClient);
+            Controls.Add(btnClear);
+            Controls.Add(btnDelete);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnAdd);
+            Controls.Add(lblPhoneNumber);
+            Controls.Add(txtClientName);
+            Controls.Add(lblCientName);
+            Cursor = Cursors.SizeAll;
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "Clients";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvList).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picLoad).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CloseForm).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)tblClient).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Panel panel2;
         private Label lblTotal;
         private Button btnPrintBill;
-        private Button btnReset;
-        private Label lblMiniTitle;
-        private Label lblList;
-        private TextBox tbAddress;
-        private TextBox tbPhoneNumber;
         private TextBox tbUsername;
-        private Label lblAddress;
-        private Label lblPhoneNumber;
         private Label lblUserName;
-        private DataGridView dgvList;
-        private Button btnBooks;
-        private Panel panel1;
-        private Button btnLogOut;
-        private Label lblTitle;
-        private Button btnDashboard;
         private Button btnUsers;
-        private Button btnAdd;
-        private Button btnEdit;
+        private Label label4;
+        private PictureBox picLoad;
+        private TextBox txtSearch;
+        private TextBox picPhoneNumber;
+        private ContextMenuStrip contextMenuStrip1;
+        private PictureBox CloseForm;
+        private Label lbClientList;
+        private TextBox txtNhaxuatban;
+        private Label label8;
+        private Panel panel1;
+        private Button btnSearch;
+        private DataGridView tblClient;
+        private DateTimePicker dtimerNhap;
+        private TextBox picClient;
+        private Button btnClear;
         private Button btnDelete;
-        private TextBox tbClientName;
-        private Label lblClientName;
-        private Button btnClients;
+        private Button btnUpdate;
+        private Button btnAdd;
+        private TextBox txtGiasach;
+        private TextBox txtSoluong;
+        private Label label6;
+        private ComboBox cmbTheloai;
+        private Label label5;
+        private Label lblPhoneNumber;
+        private TextBox txtClientName;
+        private Label lblCientName;
+        private TextBox txtPhoneNumber;
+        private Label label7;
+        private TextBox picDate;
+        private Panel panel2;
     }
 }
