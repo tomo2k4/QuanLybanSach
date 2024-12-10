@@ -103,5 +103,12 @@ namespace QuanLyBanSachCSharph.Views
                 MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void lblDangki_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SignUp signUpForm = new SignUp();
+            signUpForm.Show();
+        }
     }
 }

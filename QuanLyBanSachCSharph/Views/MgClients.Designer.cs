@@ -49,7 +49,6 @@ namespace QuanLyBanSachCSharph.Views
             lblCientName = new Label();
             txtPhoneNumber = new TextBox();
             lblEmail = new Label();
-            pnFiller = new Panel();
             txtEmail = new TextBox();
             lblSex = new Label();
             cbSex = new ComboBox();
@@ -368,7 +367,6 @@ namespace QuanLyBanSachCSharph.Views
             Controls.Add(cbSex);
             Controls.Add(lblSex);
             Controls.Add(txtEmail);
-            Controls.Add(pnFiller);
             Controls.Add(txtPhoneNumber);
             Controls.Add(picLoad);
             Controls.Add(txtSearch);
@@ -433,7 +431,6 @@ namespace QuanLyBanSachCSharph.Views
         private Label lblCientName;
         private TextBox txtPhoneNumber;
         private Label lblEmail;
-        private Panel pnFiller;
         private TextBox txtEmail;
         private Label lblSex;
         private ComboBox cbSex;
