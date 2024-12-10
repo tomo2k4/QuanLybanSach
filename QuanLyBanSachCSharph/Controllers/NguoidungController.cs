@@ -10,12 +10,12 @@ namespace QuanLyBanSachCSharph.Controllers
 {
     public class NguoidungController
     {
-        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\admin\source\repos\ManagementBookShop\QuanLyBanSachCSharph\QuanlyBookshop.mdf;Integrated Security=True;Connect Timeout=30";
+        private readonly DBConnect dbConnect = new DBConnect();
 
         // Phương thức kiểm tra đăng nhập
         public bool Authenticate(NguoidungModel user)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = dbConnect.GetConnection())
             {
                 try
                 {
@@ -34,5 +34,32 @@ namespace QuanLyBanSachCSharph.Controllers
                 }
             }
         }
+
+
+        public int GetTotalMembers()
+        {
+            int totalMembers = 0;
+            string query = "SELECT COUNT(*) AS total FROM tbl_thanhvien";
+
+            using (SqlConnection conn = dbConnect.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        totalMembers = (int)cmd.ExecuteScalar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Lỗi khi lấy tổng số thành viên: " + ex.Message);
+                }
+            }
+
+            return totalMembers;
+        }
+
+
     }
 }

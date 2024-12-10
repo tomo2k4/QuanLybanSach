@@ -322,7 +322,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             tblSach.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             tblSach.RowHeadersWidth = 51;
-            tblSach.RowTemplate.Height = 30;
+            tblSach.RowTemplate.Height = 60;
             tblSach.Size = new Size(1100, 390);
             tblSach.TabIndex = 21;
             tblSach.CellContentClick += tblSach_CellContentClick;

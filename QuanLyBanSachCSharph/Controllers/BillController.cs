@@ -15,19 +15,19 @@ namespace QuanLyBanSachCSharph.Controllers
 
         public DataTable GetBooks()
         {
-            String query = "SELECT * FROM Books";
+            string query = "SELECT * FROM Books";
 
             using (SqlConnection conn = DBConnect.GetConnection())
             {
-                conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter(query, conn);
                 var ds = new DataSet();
                 sda.Fill(ds);
-                conn.Close();
 
+                // Return the first table from the DataSet
                 return ds.Tables[0];
             }
         }
+
 
         public void UpdateBookStock(int newQty, int key)
         {
@@ -53,5 +53,32 @@ namespace QuanLyBanSachCSharph.Controllers
         {
             return quantity * price;
         }
+
+        // Phương thức tính tổng doanh thu
+        public decimal GetTotalRevenue()
+        {
+            decimal totalRevenue = 0;
+            string query = "SELECT SUM(giasach) FROM tbl_Hoadon INNER JOIN tbl_sach ON tbl_Hoadon.id_sach = tbl_sach.id_sach";
+
+            using (SqlConnection conn = DBConnect.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        totalRevenue = (decimal)cmd.ExecuteScalar(); // Lấy tổng giá trị doanh thu từ cơ sở dữ liệu
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Lỗi khi tính tổng doanh thu: " + ex.Message);
+                }
+            }
+
+            return totalRevenue;
+        }
+
+
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BookShop;
+using QuanLyBanSachCSharph.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +18,10 @@ namespace QuanLyBanSachCSharph.Views
         {
             InitializeComponent();
             DesignUI();
+            UpdateTotalMembers();
+            UpdateTotalBooks();
+            UpdateTotalRevenue();
+
         }
 
         private void HomePage_Load(object sender, EventArgs e)
@@ -28,6 +34,49 @@ namespace QuanLyBanSachCSharph.Views
             pnlUser.Visible = false;
 
         }
+
+        private void UpdateTotalMembers()
+        {
+            try
+            {
+                NguoidungController nguoidungController = new NguoidungController();
+                int totalMembers = nguoidungController.GetTotalMembers(); // Gọi phương thức từ controller
+                label6.Text = totalMembers.ToString(); // Hiển thị số lượng lên label6
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi lấy tổng số thành viên: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void UpdateTotalBooks()
+        {
+            try
+            {
+                SachController sachController = new SachController();
+                int totalBooks = sachController.GetTotalBooks(); // Lấy tổng số sách từ controller
+                label7.Text = totalBooks.ToString(); // Cập nhật tổng số sách lên label6
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi lấy tổng số sách: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void UpdateTotalRevenue()
+        {
+            try
+            {
+                BillController hoadonController = new BillController();
+                decimal totalRevenue = hoadonController.GetTotalRevenue(); // Lấy tổng doanh thu từ controller
+                label9.Text = totalRevenue.ToString("C"); // Cập nhật tổng doanh thu lên label6 dưới định dạng tiền tệ
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tính tổng doanh thu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void HideMenu()
         {
             if (pnlbooks.Visible == true)
@@ -68,7 +117,7 @@ namespace QuanLyBanSachCSharph.Views
         private void btnAuthor_Click(object sender, EventArgs e)
         {
             HideMenu();
-            //openChildForm(new Biiling());
+            openChildForm(new Billing());
         }
 
         private void btnMgBook_Click(object sender, EventArgs e)
@@ -135,6 +184,11 @@ namespace QuanLyBanSachCSharph.Views
             // Tạo đối tượng form đăng nhập và hiển thị lại
             Login loginForm = new Login();
             loginForm.Show(); // Mở form đăng nhập
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -323,10 +323,10 @@ namespace QuanLyBanSachCSharph.Views
                     // Gán dữ liệu từ bảng vào các ô nhập liệu
                     txtMasach.Text = selectedRow.Cells["id_sach"].Value?.ToString();
                     txtTensach.Text = selectedRow.Cells["tensach"].Value?.ToString();
-                    txtTacgia.Text = selectedRow.Cells["tentacgia"].Value?.ToString();
+                    //txtTacgia.Text = selectedRow.Cells["tentacgia"].Value?.ToString();
                     txtMatg.Text = selectedRow.Cells["id_tacgia"].Value?.ToString();
                     txtMatl.Text = selectedRow.Cells["id_theloai"].Value?.ToString();
-                    cmbTheloai.SelectedIndex = cmbTheloai.FindStringExact(selectedRow.Cells["tentheloai"].Value?.ToString());
+                    //cmbTheloai.SelectedIndex = cmbTheloai.FindStringExact(selectedRow.Cells["tentheloai"].Value?.ToString());
                     txtNhaxuatban.Text = selectedRow.Cells["nhaxuatban"].Value?.ToString();
                     txtSoluong.Text = selectedRow.Cells["soluong"].Value?.ToString();
                     txtGiasach.Text = selectedRow.Cells["giasach"].Value?.ToString();

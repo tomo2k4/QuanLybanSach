@@ -243,6 +243,30 @@ namespace QuanLyBanSachCSharph.Controllers
 
 
 
+        public int GetTotalBooks()
+        {
+            int totalBooks = 0;
+            string query = "SELECT COUNT(*) AS total FROM tbl_sach";
+
+            using (SqlConnection conn = dbConnect.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        totalBooks = (int)cmd.ExecuteScalar(); // Lấy kết quả đếm từ cơ sở dữ liệu
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Lỗi khi lấy tổng số sách: " + ex.Message);
+                }
+            }
+
+            return totalBooks;
+        }
+
 
 
 

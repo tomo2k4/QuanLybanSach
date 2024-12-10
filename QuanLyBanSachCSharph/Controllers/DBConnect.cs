@@ -16,7 +16,7 @@ namespace QuanLyBanSachCSharph.Controllers
         public DBConnect()
         {
             // Đường dẫn tới file .mdf trong dự án
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\admin\source\repos\ManagementBookShop\QuanLyBanSachCSharph\QuanlyBookshop.mdf;Integrated Security=True;Connect Timeout=30";
+            connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\admin\source\repos\ManagementBookShop\QuanLyBanSachCSharph\QuanlyBookshop.mdf;Integrated Security=True;Connect Timeout=30";
         }
 
         // Hàm trả về kết nối

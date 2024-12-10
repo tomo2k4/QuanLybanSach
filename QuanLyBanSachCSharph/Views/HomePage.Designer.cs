@@ -56,7 +56,6 @@
             label7 = new Label();
             label8 = new Label();
             pictureBox3 = new PictureBox();
-            dataGridView1 = new DataGridView();
             panel3 = new Panel();
             label3 = new Label();
             label2 = new Label();
@@ -76,7 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CloseForm).BeginInit();
@@ -283,7 +281,6 @@
             pnlCover.Controls.Add(panel6);
             pnlCover.Controls.Add(panel4);
             pnlCover.Controls.Add(panel5);
-            pnlCover.Controls.Add(dataGridView1);
             pnlCover.Controls.Add(panel3);
             pnlCover.Controls.Add(panel2);
             pnlCover.Dock = DockStyle.Fill;
@@ -299,16 +296,16 @@
             panel6.Controls.Add(label9);
             panel6.Controls.Add(label10);
             panel6.Controls.Add(pictureBox4);
-            panel6.Location = new Point(765, 164);
+            panel6.Location = new Point(340, 562);
             panel6.Name = "panel6";
-            panel6.Size = new Size(303, 190);
+            panel6.Size = new Size(534, 308);
             panel6.TabIndex = 4;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Roboto", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(34, 82);
+            label9.Location = new Point(40, 182);
             label9.Name = "label9";
             label9.Size = new Size(98, 72);
             label9.TabIndex = 3;
@@ -319,7 +316,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Roboto", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.ForeColor = SystemColors.ControlDarkDark;
-            label10.Location = new Point(34, 21);
+            label10.Location = new Point(166, 70);
             label10.Name = "label10";
             label10.Size = new Size(221, 41);
             label10.TabIndex = 2;
@@ -328,7 +325,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(171, 65);
+            pictureBox4.Location = new Point(22, 47);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(104, 99);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -341,16 +338,16 @@
             panel4.Controls.Add(label6);
             panel4.Controls.Add(label5);
             panel4.Controls.Add(pictureBox2);
-            panel4.Location = new Point(81, 164);
+            panel4.Location = new Point(92, 218);
             panel4.Name = "panel4";
-            panel4.Size = new Size(300, 190);
+            panel4.Size = new Size(419, 288);
             panel4.TabIndex = 2;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Roboto", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(41, 82);
+            label6.Location = new Point(85, 140);
             label6.Name = "label6";
             label6.Size = new Size(98, 72);
             label6.TabIndex = 3;
@@ -361,16 +358,17 @@
             label5.AutoSize = true;
             label5.Font = new Font("Roboto", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.ControlDarkDark;
-            label5.Location = new Point(41, 21);
+            label5.Location = new Point(105, 64);
             label5.Name = "label5";
             label5.Size = new Size(88, 41);
             label5.TabIndex = 2;
             label5.Text = "User";
+            label5.Click += label5_Click;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(167, 65);
+            pictureBox2.Location = new Point(248, 122);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(104, 99);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -383,16 +381,16 @@
             panel5.Controls.Add(label7);
             panel5.Controls.Add(label8);
             panel5.Controls.Add(pictureBox3);
-            panel5.Location = new Point(428, 164);
+            panel5.Location = new Point(648, 217);
             panel5.Name = "panel5";
-            panel5.Size = new Size(294, 190);
+            panel5.Size = new Size(441, 289);
             panel5.TabIndex = 3;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Roboto", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(34, 82);
+            label7.Location = new Point(101, 142);
             label7.Name = "label7";
             label7.Size = new Size(98, 72);
             label7.TabIndex = 3;
@@ -403,7 +401,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Roboto", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label8.ForeColor = SystemColors.ControlDarkDark;
-            label8.Location = new Point(34, 21);
+            label8.Location = new Point(121, 72);
             label8.Name = "label8";
             label8.Size = new Size(94, 41);
             label8.TabIndex = 2;
@@ -412,21 +410,12 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(166, 65);
+            pictureBox3.Location = new Point(267, 119);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(104, 99);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(81, 399);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(987, 466);
-            dataGridView1.TabIndex = 5;
             // 
             // panel3
             // 
@@ -528,7 +517,6 @@
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel2.ResumeLayout(false);
@@ -567,7 +555,6 @@
         private Label label9;
         private Label label10;
         private PictureBox pictureBox4;
-        private DataGridView dataGridView1;
         private Panel panel4;
         private Label label6;
         private Label label5;
