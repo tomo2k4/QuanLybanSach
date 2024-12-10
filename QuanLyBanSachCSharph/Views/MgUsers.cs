@@ -117,17 +117,26 @@ namespace QuanLyBanSachCSharph.Views
         }
 
         // Xử lý khi người dùng chọn một dòng trong DataGridView
-        private void tblUser_CellContentClick(object sender, EventArgs e)
+        private void tblUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (tblUser.SelectedRows.Count >= 0) // Kiểm tra nếu người dùng đã chọn một dòng
+            // Kiểm tra nếu có dòng được chọn
+            if (tblUser.SelectedRows.Count > 0)
             {
-                txtClientName.Text = tblUser.SelectedRows[0].Cells["hoten"].Value.ToString();
-                txtUsername.Text = tblUser.SelectedRows[0].Cells["username"].Value.ToString();
-                txtPhoneNumber.Text = tblUser.SelectedRows[0].Cells["sodt"].Value.ToString();
-                txtEmail.Text = tblUser.SelectedRows[0].Cells["email"].Value.ToString();
-                cbSex.SelectedItem = tblUser.SelectedRows[0].Cells["gioitinh"].Value.ToString();
+                var selectedRow = tblUser.SelectedRows[0];
+
+                // Kiểm tra và gán giá trị nếu không null
+                txtClientName.Text = selectedRow.Cells["hoten"].Value?.ToString() ?? string.Empty;
+                txtUsername.Text = selectedRow.Cells["username"].Value?.ToString() ?? string.Empty;
+                txtPhoneNumber.Text = selectedRow.Cells["sodt"].Value?.ToString() ?? string.Empty;
+                txtEmail.Text = selectedRow.Cells["email"].Value?.ToString() ?? string.Empty;
+                cbSex.SelectedItem = selectedRow.Cells["gioitinh"].Value?.ToString() ?? null;
+            }
+            else
+            {
+                MessageBox.Show("Please select a row first.");
             }
         }
+
 
         // Đóng ứng dụng
         private void CloseForm_Click(object sender, EventArgs e)

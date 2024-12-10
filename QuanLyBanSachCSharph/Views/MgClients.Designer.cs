@@ -49,7 +49,6 @@ namespace QuanLyBanSachCSharph.Views
             lblCientName = new Label();
             txtPhoneNumber = new TextBox();
             lblEmail = new Label();
-            pnFiller = new Panel();
             txtEmail = new TextBox();
             lblSex = new Label();
             cbSex = new ComboBox();
@@ -82,7 +81,7 @@ namespace QuanLyBanSachCSharph.Views
             // picLoad
             // 
             picLoad.Image = (Image)resources.GetObject("picLoad.Image");
-            picLoad.Location = new Point(1076, 63);
+            picLoad.Location = new Point(1070, 66);
             picLoad.Margin = new Padding(4);
             picLoad.Name = "picLoad";
             picLoad.Size = new Size(48, 40);
@@ -95,7 +94,7 @@ namespace QuanLyBanSachCSharph.Views
             // 
             txtSearch.BorderStyle = BorderStyle.FixedSingle;
             txtSearch.Font = new Font("Microsoft Sans Serif", 12F);
-            txtSearch.Location = new Point(670, 71);
+            txtSearch.Location = new Point(664, 74);
             txtSearch.Margin = new Padding(4);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(260, 26);
@@ -110,7 +109,7 @@ namespace QuanLyBanSachCSharph.Views
             // CloseForm
             // 
             CloseForm.Image = (Image)resources.GetObject("CloseForm.Image");
-            CloseForm.Location = new Point(1092, 0);
+            CloseForm.Location = new Point(1093, 0);
             CloseForm.Margin = new Padding(4);
             CloseForm.Name = "CloseForm";
             CloseForm.Size = new Size(48, 40);
@@ -139,7 +138,7 @@ namespace QuanLyBanSachCSharph.Views
             pnTitle.Location = new Point(0, 0);
             pnTitle.Margin = new Padding(4);
             pnTitle.Name = "pnTitle";
-            pnTitle.Size = new Size(1140, 58);
+            pnTitle.Size = new Size(1141, 58);
             pnTitle.TabIndex = 57;
             // 
             // btnSearch
@@ -147,7 +146,7 @@ namespace QuanLyBanSachCSharph.Views
             btnSearch.BackColor = Color.IndianRed;
             btnSearch.Font = new Font("Microsoft Sans Serif", 13.2000008F);
             btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(938, 62);
+            btnSearch.Location = new Point(932, 65);
             btnSearch.Margin = new Padding(4);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(130, 46);
@@ -165,7 +164,7 @@ namespace QuanLyBanSachCSharph.Views
             tblClient.Name = "tblClient";
             tblClient.RowHeadersWidth = 51;
             tblClient.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            tblClient.Size = new Size(1100, 440);
+            tblClient.Size = new Size(1098, 440);
             tblClient.TabIndex = 53;
             tblClient.CellContentClick += tblClient_CellContentClick;
             // 
@@ -276,16 +275,6 @@ namespace QuanLyBanSachCSharph.Views
             lblEmail.TabIndex = 52;
             lblEmail.Text = "Email";
             // 
-            // pnFiller
-            // 
-            pnFiller.BackColor = Color.LightCoral;
-            pnFiller.Dock = DockStyle.Bottom;
-            pnFiller.Location = new Point(0, 840);
-            pnFiller.Margin = new Padding(3, 2, 3, 2);
-            pnFiller.Name = "pnFiller";
-            pnFiller.Size = new Size(1140, 60);
-            pnFiller.TabIndex = 67;
-            // 
             // txtEmail
             // 
             txtEmail.Font = new Font("Microsoft Sans Serif", 12F);
@@ -318,7 +307,7 @@ namespace QuanLyBanSachCSharph.Views
             // 
             // picClientName
             // 
-            picClientName.Image = Properties.Resources.icons8_book_64;
+            picClientName.Image = (Image)resources.GetObject("picClientName.Image");
             picClientName.Location = new Point(212, 578);
             picClientName.Name = "picClientName";
             picClientName.Size = new Size(64, 57);
@@ -345,7 +334,7 @@ namespace QuanLyBanSachCSharph.Views
             // 
             // picEmail
             // 
-            picEmail.Image = Properties.Resources.icons8_email_64;
+            picEmail.Image = (Image)resources.GetObject("picEmail.Image");
             picEmail.Location = new Point(579, 674);
             picEmail.Name = "picEmail";
             picEmail.Size = new Size(64, 58);
@@ -357,7 +346,7 @@ namespace QuanLyBanSachCSharph.Views
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1140, 900);
+            ClientSize = new Size(1141, 899);
             Controls.Add(picEmail);
             Controls.Add(picPhoneNum);
             Controls.Add(picSex);
@@ -365,7 +354,6 @@ namespace QuanLyBanSachCSharph.Views
             Controls.Add(cbSex);
             Controls.Add(lblSex);
             Controls.Add(txtEmail);
-            Controls.Add(pnFiller);
             Controls.Add(txtPhoneNumber);
             Controls.Add(picLoad);
             Controls.Add(txtSearch);
@@ -429,7 +417,6 @@ namespace QuanLyBanSachCSharph.Views
         private Label lblCientName;
         private TextBox txtPhoneNumber;
         private Label lblEmail;
-        private Panel pnFiller;
         private TextBox txtEmail;
         private Label lblSex;
         private ComboBox cbSex;

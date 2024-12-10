@@ -30,7 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MgUsers));
-            pnFiller = new Panel();
             txtPhoneNumber = new TextBox();
             picLoad = new PictureBox();
             txtSearch = new TextBox();
@@ -70,16 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)picName).BeginInit();
             SuspendLayout();
             // 
-            // pnFiller
-            // 
-            pnFiller.BackColor = Color.LightCoral;
-            pnFiller.Dock = DockStyle.Bottom;
-            pnFiller.Location = new Point(0, 840);
-            pnFiller.Margin = new Padding(3, 2, 3, 2);
-            pnFiller.Name = "pnFiller";
-            pnFiller.Size = new Size(1140, 60);
-            pnFiller.TabIndex = 87;
-            // 
             // txtPhoneNumber
             // 
             txtPhoneNumber.Font = new Font("Microsoft Sans Serif", 12F);
@@ -92,7 +81,7 @@
             // picLoad
             // 
             picLoad.Image = (Image)resources.GetObject("picLoad.Image");
-            picLoad.Location = new Point(1076, 63);
+            picLoad.Location = new Point(1069, 66);
             picLoad.Margin = new Padding(4);
             picLoad.Name = "picLoad";
             picLoad.Size = new Size(48, 40);
@@ -105,7 +94,7 @@
             // 
             txtSearch.BorderStyle = BorderStyle.FixedSingle;
             txtSearch.Font = new Font("Microsoft Sans Serif", 12F);
-            txtSearch.Location = new Point(670, 71);
+            txtSearch.Location = new Point(663, 74);
             txtSearch.Margin = new Padding(4);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(260, 26);
@@ -131,7 +120,7 @@
             pnTitle.Location = new Point(0, 0);
             pnTitle.Margin = new Padding(4);
             pnTitle.Name = "pnTitle";
-            pnTitle.Size = new Size(1140, 58);
+            pnTitle.Size = new Size(1141, 58);
             pnTitle.TabIndex = 81;
             // 
             // lblTitle
@@ -149,7 +138,7 @@
             // CloseForm
             // 
             CloseForm.Image = (Image)resources.GetObject("CloseForm.Image");
-            CloseForm.Location = new Point(1092, 0);
+            CloseForm.Location = new Point(1093, 0);
             CloseForm.Margin = new Padding(4);
             CloseForm.Name = "CloseForm";
             CloseForm.Size = new Size(48, 40);
@@ -163,7 +152,7 @@
             btnSearch.BackColor = Color.IndianRed;
             btnSearch.Font = new Font("Microsoft Sans Serif", 13.2000008F);
             btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(938, 62);
+            btnSearch.Location = new Point(931, 65);
             btnSearch.Margin = new Padding(4);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(130, 46);
@@ -179,7 +168,7 @@
             tblUser.Margin = new Padding(4);
             tblUser.Name = "tblUser";
             tblUser.RowHeadersWidth = 51;
-            tblUser.Size = new Size(1100, 440);
+            tblUser.Size = new Size(1097, 440);
             tblUser.TabIndex = 78;
             tblUser.CellContentClick += tblUser_CellContentClick;
             // 
@@ -339,7 +328,7 @@
             // 
             // picEmail
             // 
-            picEmail.Image = Properties.Resources.icons8_email_64;
+            picEmail.Image = (Image)resources.GetObject("picEmail.Image");
             picEmail.Location = new Point(439, 675);
             picEmail.Name = "picEmail";
             picEmail.Size = new Size(64, 58);
@@ -387,7 +376,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1140, 900);
+            ClientSize = new Size(1141, 899);
             Controls.Add(picName);
             Controls.Add(picUsername);
             Controls.Add(picEmail);
@@ -399,7 +388,6 @@
             Controls.Add(lblSex);
             Controls.Add(txtEmail);
             Controls.Add(lblEmail);
-            Controls.Add(pnFiller);
             Controls.Add(txtPhoneNumber);
             Controls.Add(picLoad);
             Controls.Add(txtSearch);
@@ -433,8 +421,6 @@
         }
 
         #endregion
-
-        private Panel pnFiller;
         private TextBox txtPhoneNumber;
         private PictureBox picLoad;
         private TextBox txtSearch;
