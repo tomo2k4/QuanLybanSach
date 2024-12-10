@@ -65,8 +65,7 @@
             txtMatl = new TextBox();
             txtTim = new TextBox();
             picLoad = new PictureBox();
-            button1 = new Button();
-            textBox1 = new TextBox();
+            btnshowDialogAuthor = new Button();
             ((System.ComponentModel.ISupportInitialize)picboxAnh).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tblSach).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CloseForm).BeginInit();
@@ -292,15 +291,16 @@
             // 
             // tblSach
             // 
+            tblSach.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Roboto", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.Font = new Font("Roboto", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             tblSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            tblSach.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tblSach.ColumnHeadersHeight = 30;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Roboto", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -309,6 +309,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             tblSach.DefaultCellStyle = dataGridViewCellStyle2;
+            tblSach.EditMode = DataGridViewEditMode.EditProgrammatically;
             tblSach.Location = new Point(20, 118);
             tblSach.Margin = new Padding(3, 5, 3, 5);
             tblSach.Name = "tblSach";
@@ -321,6 +322,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             tblSach.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             tblSach.RowHeadersWidth = 51;
+            tblSach.RowTemplate.Height = 30;
             tblSach.Size = new Size(1100, 390);
             tblSach.TabIndex = 21;
             tblSach.CellContentClick += tblSach_CellContentClick;
@@ -349,6 +351,7 @@
             btnTim.TabIndex = 24;
             btnTim.Text = "Search";
             btnTim.UseVisualStyleBackColor = false;
+            btnTim.Click += btnTim_Click;
             // 
             // btnTaianh
             // 
@@ -450,27 +453,19 @@
             picLoad.TabStop = false;
             picLoad.Click += picLoad_Click;
             // 
-            // button1
+            // btnshowDialogAuthor
             // 
-            button1.BackColor = Color.Brown;
-            button1.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(647, 552);
-            button1.Margin = new Padding(3, 5, 3, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(180, 44);
-            button1.TabIndex = 34;
-            button1.Text = "Choose Author";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Roboto", 12F);
-            textBox1.Location = new Point(218, 75);
-            textBox1.Margin = new Padding(3, 5, 3, 5);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(209, 32);
-            textBox1.TabIndex = 35;
+            btnshowDialogAuthor.BackColor = Color.Brown;
+            btnshowDialogAuthor.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnshowDialogAuthor.ForeColor = Color.White;
+            btnshowDialogAuthor.Location = new Point(647, 552);
+            btnshowDialogAuthor.Margin = new Padding(3, 5, 3, 5);
+            btnshowDialogAuthor.Name = "btnshowDialogAuthor";
+            btnshowDialogAuthor.Size = new Size(180, 44);
+            btnshowDialogAuthor.TabIndex = 34;
+            btnshowDialogAuthor.Text = "Choose Author";
+            btnshowDialogAuthor.UseVisualStyleBackColor = false;
+            btnshowDialogAuthor.Click += btnshowDialogAuthor_Click;
             // 
             // MgBook
             // 
@@ -478,8 +473,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1141, 899);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
+            Controls.Add(btnshowDialogAuthor);
             Controls.Add(picLoad);
             Controls.Add(txtTim);
             Controls.Add(txtMatl);
@@ -560,7 +554,6 @@
         private TextBox txtMatl;
         private TextBox txtTim;
         private PictureBox picLoad;
-        private Button button1;
-        private TextBox textBox1;
+        private Button btnshowDialogAuthor;
     }
 }

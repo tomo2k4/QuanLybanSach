@@ -30,15 +30,12 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Theloai));
-            txtTim = new TextBox();
             label9 = new Label();
             CloseForm = new PictureBox();
-            picLoad = new PictureBox();
             panel1 = new Panel();
             label4 = new Label();
             tblTheloai = new DataGridView();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            btnTim = new Button();
             btnHuy = new Button();
             btnXoa = new Button();
             btnSua = new Button();
@@ -48,27 +45,16 @@
             panel2 = new Panel();
             textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)CloseForm).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picLoad).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tblTheloai).BeginInit();
             SuspendLayout();
-            // 
-            // txtTim
-            // 
-            txtTim.BorderStyle = BorderStyle.FixedSingle;
-            txtTim.Font = new Font("Roboto", 12F);
-            txtTim.Location = new Point(669, 81);
-            txtTim.Margin = new Padding(4);
-            txtTim.Name = "txtTim";
-            txtTim.Size = new Size(260, 32);
-            txtTim.TabIndex = 63;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Roboto", 16.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.Brown;
-            label9.Location = new Point(483, 139);
+            label9.Location = new Point(449, 88);
             label9.Margin = new Padding(5, 0, 5, 0);
             label9.Name = "label9";
             label9.Size = new Size(163, 34);
@@ -87,26 +73,14 @@
             CloseForm.TabStop = false;
             CloseForm.Click += CloseForm_Click;
             // 
-            // picLoad
-            // 
-            picLoad.Image = (Image)resources.GetObject("picLoad.Image");
-            picLoad.Location = new Point(1075, 73);
-            picLoad.Margin = new Padding(4);
-            picLoad.Name = "picLoad";
-            picLoad.Size = new Size(48, 40);
-            picLoad.SizeMode = PictureBoxSizeMode.CenterImage;
-            picLoad.TabIndex = 54;
-            picLoad.TabStop = false;
-            // 
             // panel1
             // 
             panel1.Controls.Add(label4);
             panel1.Controls.Add(CloseForm);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
+            panel1.Location = new Point(0, 6);
             panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1140, 58);
+            panel1.Size = new Size(1052, 58);
             panel1.TabIndex = 57;
             // 
             // label4
@@ -124,7 +98,7 @@
             // tblTheloai
             // 
             tblTheloai.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tblTheloai.Location = new Point(78, 191);
+            tblTheloai.Location = new Point(29, 139);
             tblTheloai.Margin = new Padding(4);
             tblTheloai.Name = "tblTheloai";
             tblTheloai.RowHeadersWidth = 51;
@@ -137,25 +111,12 @@
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // btnTim
-            // 
-            btnTim.BackColor = Color.IndianRed;
-            btnTim.Font = new Font("Roboto", 13.2000008F);
-            btnTim.ForeColor = Color.White;
-            btnTim.Location = new Point(937, 72);
-            btnTim.Margin = new Padding(4);
-            btnTim.Name = "btnTim";
-            btnTim.Size = new Size(130, 46);
-            btnTim.TabIndex = 55;
-            btnTim.Text = "Search";
-            btnTim.UseVisualStyleBackColor = false;
-            // 
             // btnHuy
             // 
             btnHuy.BackColor = Color.Brown;
             btnHuy.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnHuy.ForeColor = Color.White;
-            btnHuy.Location = new Point(825, 717);
+            btnHuy.Location = new Point(791, 666);
             btnHuy.Margin = new Padding(4);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(130, 44);
@@ -168,7 +129,7 @@
             btnXoa.BackColor = Color.Brown;
             btnXoa.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnXoa.ForeColor = Color.White;
-            btnXoa.Location = new Point(603, 717);
+            btnXoa.Location = new Point(569, 666);
             btnXoa.Margin = new Padding(4);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(130, 44);
@@ -181,7 +142,7 @@
             btnSua.BackColor = Color.Brown;
             btnSua.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSua.ForeColor = Color.White;
-            btnSua.Location = new Point(380, 717);
+            btnSua.Location = new Point(346, 666);
             btnSua.Margin = new Padding(4);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(130, 44);
@@ -194,7 +155,7 @@
             btnThem.BackColor = Color.Brown;
             btnThem.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnThem.ForeColor = Color.White;
-            btnThem.Location = new Point(181, 717);
+            btnThem.Location = new Point(147, 666);
             btnThem.Margin = new Padding(4);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(130, 44);
@@ -206,7 +167,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Roboto", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(431, 613);
+            label3.Location = new Point(397, 562);
             label3.Margin = new Padding(5, 0, 5, 0);
             label3.Name = "label3";
             label3.Size = new Size(85, 28);
@@ -216,7 +177,7 @@
             // txtMatl
             // 
             txtMatl.Font = new Font("Roboto", 12F);
-            txtMatl.Location = new Point(373, 645);
+            txtMatl.Location = new Point(339, 594);
             txtMatl.Margin = new Padding(4);
             txtMatl.Name = "txtMatl";
             txtMatl.ReadOnly = true;
@@ -229,13 +190,13 @@
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 806);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1140, 93);
+            panel2.Size = new Size(1056, 93);
             panel2.TabIndex = 64;
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Roboto", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(431, 645);
+            textBox1.Location = new Point(397, 594);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(302, 35);
             textBox1.TabIndex = 65;
@@ -245,16 +206,13 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1140, 899);
+            ClientSize = new Size(1056, 899);
             Controls.Add(textBox1);
             Controls.Add(panel2);
-            Controls.Add(txtTim);
             Controls.Add(txtMatl);
             Controls.Add(label9);
-            Controls.Add(picLoad);
             Controls.Add(panel1);
             Controls.Add(tblTheloai);
-            Controls.Add(btnTim);
             Controls.Add(btnHuy);
             Controls.Add(btnXoa);
             Controls.Add(btnSua);
@@ -265,7 +223,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Theloai";
             ((System.ComponentModel.ISupportInitialize)CloseForm).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picLoad).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tblTheloai).EndInit();
@@ -274,15 +231,12 @@
         }
 
         #endregion
-        private TextBox txtTim;
         private Label label9;
         private PictureBox CloseForm;
-        private PictureBox picLoad;
         private Panel panel1;
         private Label label4;
         private DataGridView tblTheloai;
         private ContextMenuStrip contextMenuStrip1;
-        private Button btnTim;
         private TextBox txtMasach;
         private Button btnHuy;
         private Button btnXoa;

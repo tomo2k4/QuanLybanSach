@@ -114,6 +114,7 @@
             btnLogout.Text = "Logout";
             btnLogout.TextAlign = ContentAlignment.MiddleLeft;
             btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
             // pnlUser
             // 
@@ -290,6 +291,7 @@
             pnlCover.Name = "pnlCover";
             pnlCover.Size = new Size(1141, 900);
             pnlCover.TabIndex = 1;
+            pnlCover.Paint += pnlCover_Paint;
             // 
             // panel6
             // 
@@ -431,7 +433,6 @@
             panel3.BackColor = Color.MistyRose;
             panel3.Controls.Add(label3);
             panel3.Controls.Add(label2);
-            panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 65);
             panel3.Name = "panel3";
             panel3.Size = new Size(1141, 62);
@@ -460,7 +461,6 @@
             panel2.Controls.Add(CloseForm);
             panel2.Controls.Add(MinForm);
             panel2.Controls.Add(label4);
-            panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(1141, 65);

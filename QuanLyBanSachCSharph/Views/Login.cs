@@ -88,7 +88,7 @@ namespace QuanLyBanSachCSharph.Views
 
                     // Chuyển sang form chính (Main Form)
                     this.Hide();
-                    SignUp mainForm = new SignUp();
+                    HomePage mainForm = new HomePage();
                     mainForm.Show();
                 }
                 else

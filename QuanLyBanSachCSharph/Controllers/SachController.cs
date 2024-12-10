@@ -21,7 +21,7 @@ namespace QuanLyBanSachCSharph.Controllers
                 {
                     conn.Open();
 
-                    // Kiểm tra id_tacgia
+                    // Check if id_tacgia exists
                     string checkTacGiaQuery = "SELECT COUNT(*) FROM tbl_tacgia WHERE id_tacgia = @IdTacGia";
                     using (SqlCommand cmdCheckTacGia = new SqlCommand(checkTacGiaQuery, conn))
                     {
@@ -34,7 +34,7 @@ namespace QuanLyBanSachCSharph.Controllers
                         }
                     }
 
-                    // Kiểm tra id_theloai
+                    // Check if id_theloai exists
                     string checkTheLoaiQuery = "SELECT COUNT(*) FROM tbl_theloai WHERE id_theloai = @IdTheLoai";
                     using (SqlCommand cmdCheckTheLoai = new SqlCommand(checkTheLoaiQuery, conn))
                     {
@@ -47,23 +47,32 @@ namespace QuanLyBanSachCSharph.Controllers
                         }
                     }
 
-                    // Thực hiện câu lệnh INSERT
+                    // Insert book data into tbl_sach
                     string insertQuery = @"
-                        INSERT INTO tbl_sach 
-                        (tensach, id_tacgia, id_theloai, nhaxuatban, giasach, soluong, ngaynhan, anhsach) 
-                        VALUES 
-                        (@TenSach, @IdTacGia, @IdTheLoai, @NhaXuatBan, @GiaSach, @SoLuong, @NgayNhan, @AnhSach)";
+                INSERT INTO tbl_sach 
+                (tensach, id_tacgia, id_theloai, nhaxuatban, giasach, soluong, ngaynhan, trangthai, anhsach) 
+                VALUES 
+                (@TenSach, @IdTacGia, @IdTheLoai, @NhaXuatBan, @GiaSach, @SoLuong, @NgayNhan, @TrangThai, @AnhSach)";
 
                     using (SqlCommand cmdInsert = new SqlCommand(insertQuery, conn))
                     {
-                        cmdInsert.Parameters.AddWithValue("@TenSach", obj.tensach);
+                        cmdInsert.Parameters.AddWithValue("@TenSach", obj.tensach ?? (object)DBNull.Value);
                         cmdInsert.Parameters.AddWithValue("@IdTacGia", obj.idtacgia);
                         cmdInsert.Parameters.AddWithValue("@IdTheLoai", obj.idtheloai);
-                        cmdInsert.Parameters.AddWithValue("@NhaXuatBan", obj.nhaxuatban ?? (object)DBNull.Value); // Xử lý null
-                        cmdInsert.Parameters.AddWithValue("@GiaSach", obj.giasach ?? "0"); // Xử lý null
-                        cmdInsert.Parameters.AddWithValue("@SoLuong", obj.soluong ?? "0"); // Xử lý null
+                        cmdInsert.Parameters.AddWithValue("@NhaXuatBan", obj.nhaxuatban ?? (object)DBNull.Value);
+                        cmdInsert.Parameters.AddWithValue("@GiaSach", obj.giasach ?? (object)DBNull.Value);
+                        cmdInsert.Parameters.AddWithValue("@SoLuong", obj.soluong ?? (object)DBNull.Value);
                         cmdInsert.Parameters.AddWithValue("@NgayNhan", obj.ngaynhan ?? DateTime.Now.ToString("yyyy-MM-dd"));
-                        cmdInsert.Parameters.AddWithValue("@AnhSach", obj.anhsach ?? (object)DBNull.Value); // Xử lý null
+
+                        // Handle null or binary data for anhsach
+                        if (obj.anhsach != null)
+                        {
+                            cmdInsert.Parameters.AddWithValue("@AnhSach", obj.anhsach);
+                        }
+                        else
+                        {
+                            cmdInsert.Parameters.AddWithValue("@AnhSach", DBNull.Value);
+                        }
 
                         int rowsAffected = cmdInsert.ExecuteNonQuery();
                         if (rowsAffected > 0)
@@ -78,6 +87,11 @@ namespace QuanLyBanSachCSharph.Controllers
                         }
                     }
                 }
+                catch (SqlException sqlEx)
+                {
+                    MessageBox.Show("Lỗi SQL: " + sqlEx.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi khi thêm sách: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -85,6 +99,7 @@ namespace QuanLyBanSachCSharph.Controllers
                 }
             }
         }
+
 
         public DataTable GetAllBooks()
         {
@@ -127,8 +142,104 @@ namespace QuanLyBanSachCSharph.Controllers
             return booksTable;
         }
 
+        public DataTable SearchBooks(string searchTerm)
+        {
+            using (SqlConnection conn = dbConnect.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
 
+                    // Truy vấn tìm kiếm theo nhiều trường
+                    string searchQuery = @"
+                        SELECT s.id_sach, s.tensach, s.id_tacgia, tg.tentacgia, s.id_theloai, tl.tentheloai, 
+                               s.nhaxuatban, s.giasach, s.soluong, s.ngaynhan, s.trangthai, s.anhsach
+                        FROM tbl_sach s
+                        LEFT JOIN tbl_tacgia tg ON s.id_tacgia = tg.id_tacgia
+                        LEFT JOIN tbl_theloai tl ON s.id_theloai = tl.id_theloai
+                        WHERE s.id_sach LIKE @SearchTerm 
+                           OR s.tensach LIKE @SearchTerm
+                           OR tg.tentacgia LIKE @SearchTerm
+                           OR s.id_tacgia LIKE @SearchTerm
+                           OR tl.tentheloai LIKE @SearchTerm
+                           OR s.id_theloai LIKE @SearchTerm";
 
+                    using (SqlCommand cmd = new SqlCommand(searchQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@SearchTerm", "%" + searchTerm + "%");
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        DataTable searchResults = new DataTable();
+                        adapter.Fill(searchResults);
+                        return searchResults;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Lỗi khi tìm kiếm: " + ex.Message);
+                }
+            }
+        }
+
+        public bool UpdateBook(SachModel obj)
+        {
+            using (SqlConnection conn = dbConnect.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"
+                UPDATE tbl_sach
+                SET tensach = @TenSach, id_tacgia = @IdTacGia, id_theloai = @IdTheLoai, 
+                    nhaxuatban = @NhaXuatBan, giasach = @GiaSach, soluong = @SoLuong, 
+                    ngaynhan = @NgayNhan, anhsach = @AnhSach
+                WHERE id_sach = @IdSach";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@IdSach", obj.idsach);
+                        cmd.Parameters.AddWithValue("@TenSach", obj.tensach);
+                        cmd.Parameters.AddWithValue("@IdTacGia", obj.idtacgia);
+                        cmd.Parameters.AddWithValue("@IdTheLoai", obj.idtheloai);
+                        cmd.Parameters.AddWithValue("@NhaXuatBan", obj.nhaxuatban ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@GiaSach", obj.giasach ?? "0");
+                        cmd.Parameters.AddWithValue("@SoLuong", obj.soluong ?? "0");
+                        cmd.Parameters.AddWithValue("@NgayNhan", obj.ngaynhan ?? DateTime.Now.ToString("yyyy-MM-dd"));
+                        cmd.Parameters.AddWithValue("@AnhSach", obj.anhsach ?? (object)DBNull.Value);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Lỗi khi sửa sách: " + ex.Message);
+                }
+            }
+        }
+
+        public bool DeleteBook(int idSach)
+        {
+            using (SqlConnection conn = dbConnect.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "DELETE FROM tbl_sach WHERE id_sach = @IdSach";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@IdSach", idSach);
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Lỗi khi xóa sách: " + ex.Message);
+                }
+            }
+        }
 
 
 
